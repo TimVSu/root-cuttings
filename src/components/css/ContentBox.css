@@ -1,0 +1,29 @@
+#content-box {
+    margin: 10px;
+    z-index: 400;
+    width: 35rem;
+    color: var(--text);
+    font-size: 9pt;
+    background-color: var(--background);
+    font-family: "Roboto Mono", monospace;
+    border-color: var(--accent);
+    border-width: 2px;
+}
+
+#close-contentbox {
+    text-align: right;
+    text-decoration: none;
+    color: var(--accent);
+}
+
+#show-more-button {
+    text-decoration: none;
+    color: var(--secondary);
+    font-size: 8pt;
+    padding: 0%;
+    margin-top: -30px;
+}
+
+#show-more-collapse {
+    font-size: 8pt;
+}

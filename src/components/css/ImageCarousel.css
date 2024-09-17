@@ -1,0 +1,11 @@
+#image-gallery {
+    width: 100%;
+    margin: auto;
+    align-items: center;
+}
+
+.gallery-image {
+    height: 200px;
+    border-color: var(--accent);
+    border-width: 2px;
+}

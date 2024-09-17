@@ -1,27 +1,49 @@
-import { MapContainer, LayersControl } from 'react-leaflet';
+import { useState } from 'react';
+import { MapContainer, ZoomControl } from 'react-leaflet';
 import LBaseLayer from './LBaseLayer';
+import GeoFeatures from './GeoFeatures';
+import FragmentViz from './FragmentViz';
 import './css/Map.css';
 
 export default function Map() {
 
+    const [selectedFeature, setSelectedFeature] = useState(null);
+    const [featureFocus, setFeatureFocus] = useState(false);
+
+    const MAPS = {
+        esriWorldImagery: {
+            url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+            attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+          }
+    }
+
     return (
-            <MapContainer
-                className="mapcontainer"
-                center={[50.983083, 10.325190]}
-                zoom={7}
-                minZoom={4}
-                maxZoom={19}
-                maxBounds={[[90, -180], [-90, 180]]}
-                maxBoundsViscosity={1.0}
-            >
-                <LayersControl position="bottomleft">
-                    <LayersControl.BaseLayer checked name="Streets">
-                        <LBaseLayer id="mapbox/streets-v11" />
-                    </LayersControl.BaseLayer>
-                    <LayersControl.BaseLayer name="Satellite">
-                        <LBaseLayer id="mapbox/satellite-v9" />
-                    </LayersControl.BaseLayer>
-                </LayersControl>
-            </MapContainer>
+        <MapContainer
+            className="mapcontainer"
+            center={[39.637262, 35.083669]}
+            zoomControl={false}
+            zoom={4.5}
+            minZoom={4.5}
+            maxZoom={15}
+            zoomSnap={0.5}
+            zoomDelta={0.5}
+            maxBounds={[[90, -180], [-90, 180]]}
+            maxBoundsViscosity={1.0}>
+            <LBaseLayer 
+                url={MAPS.esriWorldImagery.url}
+                attribution={MAPS.esriWorldImagery.attribution}/>
+            <ZoomControl 
+                position="topright"/>
+            <GeoFeatures 
+                setSelectedFeature={setSelectedFeature}
+                featureFocus={featureFocus} 
+                setFeatureFocus={setFeatureFocus}/>
+            { selectedFeature ?
+                <FragmentViz 
+                    selectedFeature={selectedFeature}
+                    featureFocus={featureFocus}
+                    setFeatureFocus={setFeatureFocus}/> 
+            : null }
+        </MapContainer>
     );
 }
