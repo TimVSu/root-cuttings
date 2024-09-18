@@ -18,7 +18,6 @@ import H5 from './fragments/H5';
 export default function FragmentViz({selectedFeature, setFeatureFocus}) {
 
     const coordinates = selectedFeature ? selectedFeature.geometry.coordinates : null;
-    let fragment = "D1";
     
     let icon = L.divIcon({
         html: '<i class="bi bi-chat-left-dots-fill" style="color:var(--marker);font-size:1.6rem"/>',
