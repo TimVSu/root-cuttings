@@ -20,7 +20,7 @@ export default function Map() {
     return (
         <MapContainer
             className="mapcontainer"
-            center={[39.637262, 35.083669]}
+            center={[40.637262, 32.083669]}
             zoomControl={false}
             zoom={4.5}
             minZoom={4.5}
@@ -38,10 +38,9 @@ export default function Map() {
                 setSelectedFeature={setSelectedFeature}
                 featureFocus={featureFocus} 
                 setFeatureFocus={setFeatureFocus}/>
-            { selectedFeature ?
+            { featureFocus ?
                 <FragmentViz 
                     selectedFeature={selectedFeature}
-                    featureFocus={featureFocus}
                     setFeatureFocus={setFeatureFocus}/> 
             : null }
         </MapContainer>

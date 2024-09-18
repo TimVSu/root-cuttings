@@ -1,22 +1,69 @@
-import { useEffect, useState } from 'react';
-import ContentBox from './ContentBox';
+import { Marker } from 'react-leaflet/Marker'
+import L from 'leaflet';
+import A1 from './fragments/A1';
+import A2 from './fragments/A2';
+import A3 from './fragments/A3';
+import A4 from './fragments/A4';
+import D1 from './fragments/D1';
+import D2 from './fragments/D2';
+import D3 from './fragments/D3';
+import D5 from './fragments/D5';
+import D6 from './fragments/D6';
+import H1 from './fragments/H1';
+import H3 from './fragments/H3';
+import H4 from './fragments/H4';
+import H5 from './fragments/H5';
 
-export default function FragmentViz({selectedFeature, featureFocus, setFeatureFocus}) {
 
-    const [featureProperties, setFeatureProperties] = useState({});
+export default function FragmentViz({selectedFeature, setFeatureFocus}) {
 
-    useEffect(() => {
-        if (selectedFeature.properties) {
-            setFeatureProperties(selectedFeature.properties);
-        }
-    }, [selectedFeature]);
+    const coordinates = selectedFeature ? selectedFeature.geometry.coordinates : null;
+    let fragment = "D1";
+    
+    let icon = L.divIcon({
+        html: '<i class="bi bi-chat-left-dots-fill" style="color:var(--marker);font-size:1.6rem"/>',
+        className: 'story-icon',
+        iconAnchor: [0,30]
+    });
 
     return (
-        <ContentBox
-            narrativeFragment={featureProperties.text}
-            person={featureProperties.person}
-            featureFocus={featureFocus}
-            setFeatureFocus={setFeatureFocus} />
+        <div>
+            {(() => {
+                switch (selectedFeature.id) {
+                    case 'A1':
+                        return <A1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'A2':
+                        return <A2 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'A3':
+                        return <A3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'A4':
+                        return <A4 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'D1':
+                        return <D1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'D2':
+                        return <D2 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'D3':
+                        return <D3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'D5':
+                        return <D5 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'D6':
+                        return <D6 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'H1':
+                        return <H1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'H3':
+                        return <H3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'H4':
+                        return <H4 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'H5':
+                        return <H5 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    default:
+                        return null
+                }
+            })()}
+            <Marker 
+                position={[coordinates[1], coordinates[0]]}
+                icon={icon} />            
+        </div>
     );
 }
 
