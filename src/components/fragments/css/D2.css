@@ -1,0 +1,4 @@
+.leaflet-image-layer {
+    opacity: 0.6;
+    filter: contrast(120%) saturate(130%);
+}

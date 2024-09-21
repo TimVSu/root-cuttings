@@ -1,4 +1,4 @@
-import { Marker } from 'react-leaflet/Marker'
+import { Marker } from 'react-leaflet/Marker';
 import L from 'leaflet';
 import A1 from './fragments/A1';
 import A2 from './fragments/A2';
@@ -13,14 +13,15 @@ import H1 from './fragments/H1';
 import H3 from './fragments/H3';
 import H4 from './fragments/H4';
 import H5 from './fragments/H5';
-
+import D7 from './fragments/D7';
 
 export default function FragmentViz({selectedFeature, setFeatureFocus}) {
 
-    const coordinates = selectedFeature ? selectedFeature.geometry.coordinates : null;
+    const coordinates = selectedFeature.geometry.coordinates;
+    const markerColor = selectedFeature.properties.person.toLowerCase();
     
     let icon = L.divIcon({
-        html: '<i class="bi bi-chat-left-dots-fill" style="color:var(--marker);font-size:1.6rem"/>',
+        html: `<i class="bi bi-chat-left-dots-fill" style="color:var(--${markerColor});font-size:1.6rem;cursor:grab"/>`,
         className: 'story-icon',
         iconAnchor: [0,30]
     });
@@ -47,6 +48,8 @@ export default function FragmentViz({selectedFeature, setFeatureFocus}) {
                         return <D5 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
                     case 'D6':
                         return <D6 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                    case 'D7':
+                        return <D7 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
                     case 'H1':
                         return <H1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
                     case 'H3':
@@ -61,7 +64,8 @@ export default function FragmentViz({selectedFeature, setFeatureFocus}) {
             })()}
             <Marker 
                 position={[coordinates[1], coordinates[0]]}
-                icon={icon} />            
+                icon={icon}
+                id="fragment-icon" />            
         </div>
     );
 }

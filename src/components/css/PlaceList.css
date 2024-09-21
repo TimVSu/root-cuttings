@@ -1,0 +1,16 @@
+#place-stack {
+    width: 200px;
+    z-index: 500;
+    position: relative;
+    margin: 10px;
+}
+
+.place-button {
+    width: fit-content;
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+    font-size: 10pt !important;
+    font-family: var(--font) !important;
+    border-color: var(--text) !important;
+    border-width: 1px !important;
+}

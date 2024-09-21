@@ -2,7 +2,7 @@ import ContentBox from './../ContentBox';
 
 export default function A2({feature, setFeatureFocus}) {
 
-    const properties = feature ? feature.properties : null;
+    const properties = feature.properties;
 
     return (
         <div>

@@ -1,0 +1,28 @@
+#info-toast {
+    width: 30rem;
+    z-index: 600;
+    position: relative;
+    margin-top: 0px;
+    margin-right: 10px;
+    font-size: 10pt !important;
+    background-color: var(--background) !important;
+}
+
+#hadi-span {
+    background-color: var(--hadi);
+    color: var(--background);
+}
+
+#azar-span {
+    background-color: var(--azar);
+    color: var(--background);
+}
+
+#darya-span {
+    background-color: var(--darya);
+    color: var(--background);
+}
+
+#toast-icon {
+    font-size: 1.3rem;
+}

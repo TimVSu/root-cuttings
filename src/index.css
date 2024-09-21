@@ -1,18 +1,19 @@
 :root {
   --text: #011726;
   --background: #fef6e1;
-  --primary: #2f727f;
+  --primary: #388898;
   --secondary: #4d7769;
   --accent: #1e3711;  
-  --marker: #e65714;
-}
+  --marker: #b24263;
+  --azar: #800080;
+  --darya: #e65714;
+  --hadi: #0000ff;
+  --font: "Roboto Mono", monospace;
 
+}
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

@@ -23,12 +23,12 @@
         "properties": {        
           "marker_location": "Teheran",
           "person": "Darya",
-          "text": "Als ich jünger war, habe ich oft von einem fantastischen Land geträumt, der Verschmelzung von Iran und Deutschland. Als ich etwas älter wurde, habe ich davon fantasiert, wie ich in Deutschland eingestellt bin aber im Iran lebe, das Land entdecke und Abenteuer erlebe; das Leben hier hat sich temporär angefühlt, zweckgebunden. Das letzte Mal war ich vor fünf Jahren im Iran, seitdem ist sehr viel passiert. Ich weiß nicht, wann und wie ich Iran wieder besuchen werde. Ich weiß nur, dass die Distanz zwischen uns immer größer wurde. Und doch sehne ich mich oft zurück in die Nachbarschaft meiner Kindheit, nach den Straßenkatzen, den Bergen am Horizont, der Norouz-Stimmung und dem Essen. Und ich weiß, dass das Gefühl, wonach ich mich sehne, unerreichbar ist.\n\nManchmal fühlt es sich so an, als hätte mich jemand mit Gewalt aus der Erde rausgerissen und hektisch woanders eingepflanzt, ohne einen einzigen Gedanken an die hinterbliebenen Wurzeln zu verlieren."
+          "text": "Als ich jünger war, habe ich oft von einem fantastischen Land geträumt, der Verschmelzung von Iran und Deutschland. Als ich etwas älter wurde, habe ich davon fantasiert, wie ich in Deutschland eingestellt bin aber im Iran lebe, das Land entdecke und Abenteuer erlebe; das Leben in Deutschland hat sich temporär angefühlt, zweckgebunden.\n\nDas letzte Mal war ich vor fünf Jahren im Iran, seitdem ist sehr viel passiert. Ich weiß nicht, wann und wie ich Iran wieder besuchen werde. Ich weiß nur, dass die Distanz zwischen uns immer größer wurde. Und doch sehne ich mich oft zurück in die Nachbarschaft meiner Kindheit, nach den Straßenkatzen, den Bergen am Horizont, der Norouz-Stimmung und dem Essen. Und ich weiß, dass das Gefühl, wonach ich mich sehne, unerreichbar ist."
         },
         "geometry": {
           "coordinates": [
-            51.15562205845783,
-            35.409880175150874 
+            51.41066016498163,
+            35.73629405409138 
           ],
           "type": "Point"
         }
@@ -77,6 +77,22 @@
           "coordinates": [
             55.88219398139495,
             26.6158725032075
+          ],
+          "type": "Point"
+        }
+      },
+      {
+        "id": "D7",
+        "type": "Feature",
+        "properties": {
+          "marker_location": "Teheran",
+          "person": "Darya",
+          "text": "Manchmal fühlt es sich so an, als hätte mich jemand mit Gewalt aus der Erde rausgerissen und hektisch woanders eingepflanzt, ohne einen einzigen Gedanken an die hinterbliebenen Wurzeln zu verlieren."
+        },
+        "geometry": {
+          "coordinates": [
+            51.15562205845783,
+            35.409880175150874
           ],
           "type": "Point"
         }
@@ -167,7 +183,7 @@
         "properties": {        
           "marker_location": "Zandschan",
           "person": "Hadi",
-          "text": "Es gab in meinem Leben nicht viel Stabilität und Ruhe. Meine Eltern sind in den 40ern, wie viele andere in der Zeit, von ihrem Dorf nach Teheran gezogen, um Arbeit zu finden. Sie waren beide Analphabeten und sprachen nur wenig Persisch. Als der zweitälteste Sohn musste ich natürlich als Jugendlicher schon anfangen zu arbeiten und Verantwortung für meine jüngeren Geschwister übernehmen. Da bleibt nicht viel Zeit übrig für Schule und andere Spielereien. Die politische Lage im Iran war auch immer sehr turbulent, schon vor der Revolution von 1979. Nach der Revolution, mit dem Beginn des Krieges und den Sanktionen ist die Inflation in den Himmel geschossen und die Wirtschaft ging den Bach runter. Ich habe immer viel gearbeitet, all meine Energie darin gesteckt, für meine Familie, meine Frau und Kinder zu sorgen. Doch es hat am Ende nicht gereicht. Ich habe gehofft, in Deutschland einen Job zu finden, womit ich ein besseres Leben für sie ermöglichen kann, aber das war viel schwieriger als gedacht."
+          "text": "Es gab in meinem Leben nicht viel Stabilität und Ruhe. Meine Eltern sind in den 40ern, wie viele andere in der Zeit, von ihrem Dorf in Zandschan nach Teheran gezogen, um Arbeit zu finden. Sie waren beide Analphabeten und sprachen nur wenig Persisch. Als der zweitälteste Sohn musste ich natürlich als Jugendlicher schon anfangen zu arbeiten und Verantwortung für meine jüngeren Geschwister übernehmen. Da bleibt nicht viel Zeit übrig für Schule und andere Spielereien. Die politische Lage im Iran war auch immer sehr turbulent, schon vor der Revolution von 1979. Nach der Revolution, mit dem Beginn des Krieges und den Sanktionen ist die Inflation in den Himmel geschossen und die Wirtschaft ging den Bach runter. Ich habe immer viel gearbeitet, all meine Energie darin gesteckt, für meine Familie, meine Frau und Kinder zu sorgen. Doch es hat am Ende nicht gereicht. Ich habe gehofft, in Deutschland einen Job zu finden, womit ich ein besseres Leben für sie ermöglichen kann, aber das war viel schwieriger als gedacht."
         },
         "geometry": {
           "coordinates": [
@@ -187,8 +203,8 @@
         },
         "geometry": {
           "coordinates": [
-            8.42253662958234,
-            49.323545225003755
+            8.45163597562822,
+            49.31574659224672
           ],
           "type": "Point"
         }

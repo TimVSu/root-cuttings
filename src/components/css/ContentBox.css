@@ -5,15 +5,16 @@
     color: var(--text);
     font-size: 9pt;
     background-color: var(--background);
-    font-family: "Roboto Mono", monospace;
+    font-family: var(--font);
     border-color: var(--accent);
     border-width: 2px;
+    white-space: pre-wrap;
 }
 
 #close-contentbox {
     text-align: right;
     text-decoration: none;
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 #show-more-button {

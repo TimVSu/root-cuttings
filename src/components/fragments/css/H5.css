@@ -1,0 +1,8 @@
+#h5-image {
+    height: 150px;
+    border: solid;
+    border-color: var(--accent);
+    border-width: 2px;
+    margin: auto;
+    margin-bottom: 20px;
+}

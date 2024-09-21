@@ -3,6 +3,7 @@ import { useMap } from 'react-leaflet/hooks'
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Collapse from 'react-bootstrap/Collapse';
+import { MAPCENTER } from './Map';
 import bios from './../data/bios.json';
 import './css/ContentBox.css';
 
@@ -10,12 +11,12 @@ export default function ContentBox({children, narrativeFragment, person, setFeat
 
     const [collapseOpen, setCollapseOpen] = useState(false);
     const [bio, setBio] = useState({});
-    const map = useMap()
+    const map = useMap();
 
 
     function handleClose() {
-        setFeatureFocus(false)
-        map.setView([39.637262, 35.083669], 4.5);
+        setFeatureFocus(false);
+        map.setView(MAPCENTER, 4.5);
     }
 
     useEffect(() => {

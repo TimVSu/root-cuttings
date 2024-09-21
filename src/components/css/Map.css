@@ -5,3 +5,18 @@
     left: 0;
     right: 0;
 }
+
+.leaflet-control-zoom {
+    border: none !important;
+}
+
+.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+    border: 1px solid var(--text) !important;
+    font-family: var(--font) !important;
+}
+
+.leaflet-disabled {
+    color: grey !important;
+}

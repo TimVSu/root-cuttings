@@ -3,7 +3,11 @@ import { MapContainer, ZoomControl } from 'react-leaflet';
 import LBaseLayer from './LBaseLayer';
 import GeoFeatures from './GeoFeatures';
 import FragmentViz from './FragmentViz';
+import PlaceList from './PlaceList';
+import InfoToast from './InfoToast';
 import './css/Map.css';
+
+export const MAPCENTER = [40.637262, 32.083669];
 
 export default function Map() {
 
@@ -20,7 +24,7 @@ export default function Map() {
     return (
         <MapContainer
             className="mapcontainer"
-            center={[40.637262, 32.083669]}
+            center={MAPCENTER}
             zoomControl={false}
             zoom={4.5}
             minZoom={4.5}
@@ -33,11 +37,16 @@ export default function Map() {
                 url={MAPS.esriWorldImagery.url}
                 attribution={MAPS.esriWorldImagery.attribution}/>
             <ZoomControl 
-                position="topright"/>
-            <GeoFeatures 
-                setSelectedFeature={setSelectedFeature}
-                featureFocus={featureFocus} 
-                setFeatureFocus={setFeatureFocus}/>
+                position="bottomright"/>
+            { !featureFocus ?
+                <div>
+                    <InfoToast />
+                    <PlaceList />
+                    <GeoFeatures 
+                        setSelectedFeature={setSelectedFeature}
+                        setFeatureFocus={setFeatureFocus}/>
+                </div>
+            : null }
             { featureFocus ?
                 <FragmentViz 
                     selectedFeature={selectedFeature}

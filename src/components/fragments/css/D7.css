@@ -1,0 +1,37 @@
+.modal-button {
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+    font-size: 10pt !important;
+    font-family: var(--font) !important;
+    border-color: var(--accent) !important;
+    border-width: 1px !important;
+    width: fit-content;
+}
+
+.modal-content, .toast {
+    background-color: var(--primary) !important;
+    font-size: 11pt !important;
+    font-family: var(--font);
+    border-color: var(--text) !important;
+    border-width: 2px !important;
+}
+
+.modal-content {
+    background-color: var(--primary) !important;
+    color: var(--text) !important;
+}
+
+.toast {
+    float: right;
+    z-index: 500;
+    position: relative;
+    margin-right: 10rem;
+    margin-top: 10rem;
+}
+
+#close-toast {
+    float: right;
+    text-decoration: none;
+    color: var(--text);
+}
+
