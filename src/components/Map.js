@@ -38,6 +38,11 @@ export default function Map() {
                 attribution={MAPS.esriWorldImagery.attribution}/>
             <ZoomControl 
                 position="bottomright"/>
+            { featureFocus ?
+                <FragmentViz 
+                    selectedFeature={selectedFeature}
+                    setFeatureFocus={setFeatureFocus}/> 
+            : null }
             { !featureFocus ?
                 <div>
                     <InfoToast />
@@ -46,11 +51,6 @@ export default function Map() {
                         setSelectedFeature={setSelectedFeature}
                         setFeatureFocus={setFeatureFocus}/>
                 </div>
-            : null }
-            { featureFocus ?
-                <FragmentViz 
-                    selectedFeature={selectedFeature}
-                    setFeatureFocus={setFeatureFocus}/> 
             : null }
         </MapContainer>
     );

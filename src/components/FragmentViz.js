@@ -20,7 +20,7 @@ export default function FragmentViz({ selectedFeature, setFeatureFocus }) {
     const coordinates = selectedFeature.geometry.coordinates;
     const markerColor = selectedFeature.properties.person.toLowerCase();
     
-    let icon = L.divIcon({
+    const icon = L.divIcon({
         html: `<i class="bi bi-chat-left-dots-fill" style="color:var(--${markerColor});font-size:1.6rem"/>`,
         className: 'story-icon',
         iconAnchor: [0,30]
@@ -28,6 +28,10 @@ export default function FragmentViz({ selectedFeature, setFeatureFocus }) {
 
     return (
         <div>
+            <Marker 
+                position={[coordinates[1], coordinates[0]]}
+                icon={icon}
+                interactive={false} />  
             {(() => {
                 switch (selectedFeature.id) {
                     case 'A1':
@@ -61,11 +65,7 @@ export default function FragmentViz({ selectedFeature, setFeatureFocus }) {
                     default:
                         return null
                 }
-            })()}
-            <Marker 
-                position={[coordinates[1], coordinates[0]]}
-                icon={icon}
-                interactive={false} />            
+            })()}          
         </div>
     );
 }

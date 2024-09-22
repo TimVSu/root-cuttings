@@ -11,7 +11,8 @@ export default function D3({ feature, setFeatureFocus }) {
     function styleMarker(geoJsonPoint, latLng) {
         const icon = L.divIcon({
             html: `<i class="bi bi-pin-fill" style="color:var(--darya);font-size:1.6rem"/>`,
-            className: 'diaspora-icon'
+            className: 'diaspora-icon',
+            iconAnchor: [0, 30]
         });
         return L.marker(latLng, { icon: icon, interactive: false });
     }

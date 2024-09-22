@@ -16,13 +16,14 @@ export default function D5({ feature, setFeatureFocus }) {
 
     return (
         <div>
+            <div id='gloomy-overlay'/>
             <ContentBox
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus}>
                 <span 
                     style={{color: "var(--primary)", fontSize: "8pt"}}>
-                    Auf der Karte ist Daryas ehemalige Gesamtschule in Speyer markiert.<br/><br/>
+                    Auf der Karte ist Daryas ehemalige Schule in Speyer markiert.<br/><br/>
                 </span>
                 <p 
                     id="attribution">

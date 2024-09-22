@@ -1,20 +1,13 @@
-import L from 'leaflet';
-import { GeoJSON } from 'react-leaflet';
 import ContentBox from './../ContentBox';
-import lines from './../../data/A3/friends.json';
+import ImageCarousel from '../ImageCarousel';
+import souvenir_iran from './../../data/A3/souvenir_iran.jpeg'; 
+import souvenir_vietnam from './../../data/A3/souvenir_vietnam.jpg'; 
 
 export default function A3({ feature, setFeatureFocus }) {
 
-    const properties = feature.properties;
+    const imageAttribution = 'Phương Huy, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons';
 
-    function styleMarker(geoJsonPoint, latLng) {
-        const icon = L.divIcon({
-            html: '<div style="transform:rotate(298deg)"><i class="bi bi-airplane-engines-fill" style="color:var(--text);font-size:2rem"/></div>',
-            className: 'airplane-icon'
-            // TODO: change anchor
-        });
-        return L.marker(latLng, { icon: icon });
-    }
+    const properties = feature.properties;
 
     return (
         <div>
@@ -22,14 +15,18 @@ export default function A3({ feature, setFeatureFocus }) {
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus}>
-                <span 
-                    style={{color: "var(--primary)", fontSize: "8pt"}}>
-                    Auf der Karte ist Café Tante August in Münster markiert.<br/>
-                </span>
+                <p 
+                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
+                        Auf der Karte ist Café Tante August in Münster markiert.<br/>
+                    <br/>
+                </p>
+                <ImageCarousel 
+                    images={[souvenir_vietnam, souvenir_iran]}/>
+                <p
+                    id="attribution">
+                    <br/>Foto 1: {imageAttribution}
+                </p>
             </ContentBox>
-            <GeoJSON 
-                pointToLayer={styleMarker} 
-                data={lines}/>
         </div>
   );
 }

@@ -1,11 +1,31 @@
+import { useEffect } from 'react';
 import ContentBox from './../ContentBox';
+import birds from './../../data/D6/Qeshm.m4a';
+import  azan from './../../data/D6/Azan_Qeshm.m4a';
+import './css/D6.css';
 
 export default function D6({ feature, setFeatureFocus }) {
 
     const properties = feature.properties;
 
+    useEffect(() => {
+        const azanAudio = new Audio(azan);
+        azanAudio.play();
+        azanAudio.loop = true;
+
+        const birdsAudio = new Audio(birds);
+        birdsAudio.play();
+        birdsAudio.loop = true;
+
+        return () => {
+            birdsAudio.pause();
+            azanAudio.pause();
+        }
+    })
+
     return (
         <div>
+            <div id='sunny-overlay'/>
             <ContentBox
                 narrativeFragment={properties.text}
                 person={properties.person}
