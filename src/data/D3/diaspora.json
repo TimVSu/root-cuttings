@@ -1,0 +1,103 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Buchhandlung Forough"
+        },
+        "geometry": {
+          "coordinates": [
+            6.942193624957497,
+            50.932022554382996
+          ],
+          "type": "Point"
+        },
+        "id": 0
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Restaurant Zarathustra"
+        },
+        "geometry": {
+          "coordinates": [
+            6.93582949581878,
+            50.92909305913852
+          ],
+          "type": "Point"
+        },
+        "id": 1
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Café Schallplatte"
+        },
+        "geometry": {
+          "coordinates": [
+            6.906230677811408,
+            50.93850827572706
+          ],
+          "type": "Point"
+        },
+        "id": 2
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Konditorei Nobel"
+        },
+        "geometry": {
+          "coordinates": [
+            6.941268456825725,
+            50.930980708795005
+          ],
+          "type": "Point"
+        },
+        "id": 3
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Lebensmittelgeschäft Kimia"
+        },
+        "geometry": {
+          "coordinates": [
+            6.932384885050567,
+            50.921750886286674
+          ],
+          "type": "Point"
+        },
+        "id": 4
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Iranisches Filmfestival Köln"
+        },
+        "geometry": {
+          "coordinates": [
+            6.960050471858523,
+            50.94061777270656
+          ],
+          "type": "Point"
+        },
+        "id": 5
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Musikfestival Houbara – Resonanzen Iran"
+        },
+        "geometry": {
+          "coordinates": [
+            6.935069598558755,
+            50.94289638067352
+          ],
+          "type": "Point"
+        },
+        "id": 6
+      }
+    ]
+  }

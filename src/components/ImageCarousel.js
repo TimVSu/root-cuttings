@@ -1,8 +1,7 @@
-import Carousel from 'react-bootstrap/Carousel';
-import Image from 'react-bootstrap/Image';
+import { Carousel, Image} from 'react-bootstrap';
 import './css/ImageCarousel.css';
 
-export default function ImageCarousel({images}) {
+export default function ImageCarousel({ images }) {
 
 
     return (

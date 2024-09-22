@@ -11,7 +11,7 @@ import img6 from './../../data/D1/photos/6_picknick.png';
 import img7 from './../../data/D1/photos/7_teenagers.png';
 import img8 from './../../data/D1/photos/8_older.png';
 
-export default function D1({feature, setFeatureFocus}) {
+export default function D1({ feature, setFeatureFocus }) {
 
     const properties = feature.properties;
     const IMAGES = [img1, img2, img3, img4, img5, img6, img7, img8];
@@ -28,7 +28,13 @@ export default function D1({feature, setFeatureFocus}) {
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus} >
-                <ImageCarousel images={IMAGES}/>
+                <p 
+                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
+                    Auf der Karte ist Daryas Wohnung in Köln markiert.<br/>
+                    <br/>
+                </p>
+                <ImageCarousel 
+                    images={IMAGES}/>
             </ContentBox>
         </div>
   );

@@ -1,9 +1,9 @@
+import L from 'leaflet';
 import { GeoJSON } from 'react-leaflet';
 import ContentBox from './../ContentBox';
-import L from 'leaflet';
 import lines from './../../data/A3/friends.json';
 
-export default function A3({feature, setFeatureFocus}) {
+export default function A3({ feature, setFeatureFocus }) {
 
     const properties = feature.properties;
 
@@ -21,9 +21,12 @@ export default function A3({feature, setFeatureFocus}) {
             <ContentBox
                 narrativeFragment={properties.text}
                 person={properties.person}
-                setFeatureFocus={setFeatureFocus} />
-
-
+                setFeatureFocus={setFeatureFocus}>
+                <span 
+                    style={{color: "var(--primary)", fontSize: "8pt"}}>
+                    Auf der Karte ist Café Tante August in Münster markiert.<br/>
+                </span>
+            </ContentBox>
             <GeoJSON 
                 pointToLayer={styleMarker} 
                 data={lines}/>

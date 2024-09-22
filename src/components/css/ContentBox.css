@@ -1,7 +1,7 @@
 #content-box {
     margin: 10px;
     z-index: 400;
-    width: 35rem;
+    width: 40rem;
     color: var(--text);
     font-size: 9pt;
     background-color: var(--background);
@@ -9,6 +9,10 @@
     border-color: var(--accent);
     border-width: 2px;
     white-space: pre-wrap;
+}
+
+#card-body {
+    margin-top: -15px;
 }
 
 #close-contentbox {

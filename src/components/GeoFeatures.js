@@ -1,9 +1,9 @@
-import { GeoJSON } from 'react-leaflet';
-import { useMap } from 'react-leaflet/hooks'
 import L from 'leaflet';
+import { useMap } from 'react-leaflet/hooks'
+import { GeoJSON } from 'react-leaflet';
 import locations from './../data/narrative_fragments.json';
 
-export default function GeoFeatures({setSelectedFeature, setFeatureFocus}) {
+export default function GeoFeatures({ setSelectedFeature, setFeatureFocus }) {
 
     const map = useMap();
 

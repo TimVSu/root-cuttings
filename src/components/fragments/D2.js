@@ -14,7 +14,7 @@ import img7 from './../../data/D2/photos/7.jpeg';
 import img8 from './../../data/D2/photos/8.jpeg';
 import './css/D2.css';
 
-export default function D2({feature, setFeatureFocus}) {
+export default function D2({ feature, setFeatureFocus }) {
 
     const properties = feature.properties;
     const map = useMap();
@@ -25,7 +25,7 @@ export default function D2({feature, setFeatureFocus}) {
 
     useEffect(() => {
         setTimeout(() => {
-            map.flyToBounds([[nwBound[0], nwBound[1]-5], [seBound[0], seBound[1]-5]]);
+            map.flyToBounds([[nwBound[0], nwBound[1]-7], [seBound[0], seBound[1]-7]]);
         }, 4000);
     });
 
@@ -35,7 +35,13 @@ export default function D2({feature, setFeatureFocus}) {
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus}>
-                <ImageCarousel images={IMAGES}/>
+                <p 
+                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
+                    Auf der Karte ist der Saei-Park – Daryas Lieblingspark in der Nähe der ehemaligen Wohnung ihrer Familie – in Teheren markiert.<br/>
+                    <br/>
+                </p>
+                <ImageCarousel 
+                    images={IMAGES}/>
             </ContentBox>
             <ImageOverlay 
                 url={dtl} 

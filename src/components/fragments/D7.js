@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import { useMap } from 'react-leaflet/hooks';
-import Button from 'react-bootstrap/Button';
-import Stack from 'react-bootstrap/Stack';
-import Modal from 'react-bootstrap/Modal';
-import Toast from 'react-bootstrap/Toast';
+import { Button, Stack, Modal, Toast } from 'react-bootstrap';
 import ContentBox from './../ContentBox';
 import './css/D7.css';
 
-export default function D7({feature, setFeatureFocus}) {
+export default function D7({ feature, setFeatureFocus }) {
 
     const [showModal, setShowModal] = useState(true);
     const [showToast, setShowToast] = useState(false);
@@ -41,7 +38,12 @@ export default function D7({feature, setFeatureFocus}) {
             <ContentBox
                 narrativeFragment={properties.text}
                 person={properties.person}
-                setFeatureFocus={setFeatureFocus} />
+                setFeatureFocus={setFeatureFocus}>                
+                <span 
+                    style={{color: "var(--primary)", fontSize: "8pt"}}>
+                    Auf der Karte ist der Imam Khomeini-Flughafen in Teheran markiert.<br/>
+                </span>
+            </ContentBox>
 
             <Modal
                 show={showModal}

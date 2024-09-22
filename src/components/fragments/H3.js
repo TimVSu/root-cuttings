@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useMap } from 'react-leaflet/hooks';
 import ContentBox from './../ContentBox';
 
-export default function H3({feature, setFeatureFocus}) {
+export default function H3({ feature, setFeatureFocus }) {
 
     const map = useMap();
     const properties = feature.properties;
@@ -36,7 +36,12 @@ export default function H3({feature, setFeatureFocus}) {
             <ContentBox
                 narrativeFragment={properties.text}
                 person={properties.person}
-                setFeatureFocus={setFeatureFocus} />
+                setFeatureFocus={setFeatureFocus}>
+                <span 
+                    style={{color: "var(--primary)", fontSize: "8pt"}}>
+                    Auf der Karte ist das Dorf Aghuzlu markiert, aus dem Hadis Eltern stammen.<br/>
+                </span>
+            </ContentBox>
         </div>
   );
 }

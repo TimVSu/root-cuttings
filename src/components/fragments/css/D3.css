@@ -1,0 +1,8 @@
+.diaspora-label {
+    margin-top: 45px;
+    font-family: var(--font);
+    color: var(--text);
+    font-size: 7pt;
+    border-color: var(--darya);
+    background-color: var(--background);
+}

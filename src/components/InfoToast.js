@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import Toast from 'react-bootstrap/Toast';
+import { Button, Toast} from 'react-bootstrap';
 import './css/InfoToast.css';
 
 export default function InfoToast() {

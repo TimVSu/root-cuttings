@@ -1,11 +1,11 @@
 import { TileLayer } from 'react-leaflet';
 
-export default function LBaseLayer(props) {
+export default function LBaseLayer({ attribution, url }) {
 
     return (
         <TileLayer
-            attribution={props.attribution}
-            url={props.url}
+            attribution={attribution}
+            url={url}
             tileSize={512}
             zoomOffset={-1}/>
     );

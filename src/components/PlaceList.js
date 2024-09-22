@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useMap } from 'react-leaflet/hooks'
-import Stack from 'react-bootstrap/Stack';
-import Button from 'react-bootstrap/Button';
+import { Stack, Button } from 'react-bootstrap';
 import { MAPCENTER } from './Map';
 import places from './../data/places.json';
 import './css/PlaceList.css';

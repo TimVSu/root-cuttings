@@ -1,10 +1,10 @@
 import { useEffect } from 'react';
-import ContentBox from './../ContentBox';
 import Image from 'react-bootstrap/Image';
+import ContentBox from './../ContentBox';
 import natureSound from './../../data/H5/nature.mp3';
 import './css/H5.css';
 
-export default function H5({feature, setFeatureFocus}) {
+export default function H5({ feature, setFeatureFocus }) {
 
     const properties = feature.properties;
     const soundAttribution = "100% Nature (Brook Sounds and Birds).mp3 by Sonoquilibrium – https://freesound.org/s/514750/ – License: Attribution NonCommercial 3.0";
@@ -23,13 +23,17 @@ export default function H5({feature, setFeatureFocus}) {
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus}>
+                <p 
+                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
+                    Auf der Karte ist der Ort markiert, wo Hadis Haus in Gilan stehen könnte.<br/>
+                </p>
                 <div className="d-flex justify-content-center">
                     <Image 
                         id='h5-image' 
                         src={imageUrl}
                         rounded/>
                 </div>
-                <p 
+                <p
                     id="attribution">
                     Foto: {imageAttribution}<br/>
                     Audio: {soundAttribution}

@@ -1,13 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useMap } from 'react-leaflet/hooks'
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import Collapse from 'react-bootstrap/Collapse';
+import { Button, Card, Collapse} from 'react-bootstrap';
 import { MAPCENTER } from './Map';
 import bios from './../data/bios.json';
 import './css/ContentBox.css';
 
-export default function ContentBox({children, narrativeFragment, person, setFeatureFocus}) {
+export default function ContentBox({ children, narrativeFragment, person, setFeatureFocus }) {
 
     const [collapseOpen, setCollapseOpen] = useState(false);
     const [bio, setBio] = useState({});
@@ -34,8 +32,8 @@ export default function ContentBox({children, narrativeFragment, person, setFeat
                 onClick={handleClose}>
                 x
             </Button>
-            <Card.Body 
-                id="contentbox-body">
+            <Card.Body
+                id="card-body">
                 <Card.Text 
                     className="mb-4">
                     {narrativeFragment}

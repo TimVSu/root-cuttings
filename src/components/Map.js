@@ -28,7 +28,7 @@ export default function Map() {
             zoomControl={false}
             zoom={4.5}
             minZoom={4.5}
-            maxZoom={15}
+            maxZoom={18}
             zoomSnap={0.5}
             zoomDelta={0.5}
             maxBounds={[[90, -180], [-90, 180]]}
