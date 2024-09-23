@@ -3,8 +3,19 @@ import ImageCarousel from '../ImageCarousel';
 import souvenirIran from './../../data/A3/souvenir_iran.jpeg';
 import souvenirVietnam from './../../data/A3/souvenir_vietnam.jpg';
 
+/**
+ * Component displaying the text, location description, images, and character bio related to the narrative fragment A3
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function A3({ feature, setFeatureFocus }) {
 
+    /**
+     * Attribution text for the first image of the slide show
+     */
     const imageAttribution = 'Phương Huy, CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>, via Wikimedia Commons';
 
     return (

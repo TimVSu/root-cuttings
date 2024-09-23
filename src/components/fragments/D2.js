@@ -13,14 +13,37 @@ import img7 from './../../data/D2/photos/7.jpeg';
 import img8 from './../../data/D2/photos/8.jpeg';
 import './css/D2.css';
 
+/**
+ * Component displaying the text, location description, images, character bio, and geospatial visualizations related to the narrative fragment D2
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function D2({ feature, setFeatureFocus }) {
 
+    /**
+     * The Leaflet map object
+     */
     const map = useMap();
+    /**
+     * Northwest bound of the Germany image overlay
+     */
     const nwBound = [38.585562030270566, 48.812176662525934];
+    /**
+     * Southeast bound of the Germany image overlay
+     */
     const seBound = [26.10270924957595, 60.06376547836262];
+    /**
+     * The images to be displayed in the slide show
+     */
     const images = [img1, img3, img4, img5, img6, img7, img8];
 
 
+    /**
+     * Zooms out and pans the map to show the entirety of the Germany image overlay after the view is focussed on the location marker
+     */
     useEffect(() => {
         setTimeout(() => {
             map.flyToBounds([[nwBound[0], nwBound[1] - 7], [seBound[0], seBound[1] - 7]]);

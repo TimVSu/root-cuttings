@@ -1,8 +1,17 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button, Toast } from 'react-bootstrap';
 import './css/InfoToast.css';
 
+/**
+ * Component displaying a welcome message and instructions on how to navigate the web app
+ * 
+ * @returns {React.JSX.Element}
+ */
 export default function InfoToast() {
+
+    /**
+     * State storing a boolean value indicating whether the element is shown
+     */
     const [showToast, setShowToast] = useState(true);
 
     return (

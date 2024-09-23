@@ -15,11 +15,28 @@ import H4 from './fragments/H4';
 import H5 from './fragments/H5';
 import D7 from './fragments/D7';
 
+/**
+ * Component displaying the narrative fragment, media, and visualizations of the selected geo-object
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.selectedFeature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function FragmentViz({ selectedFeature, setFeatureFocus }) {
-
+    
+    /**
+     * Coordinates of the geo-object
+     */
     const coordinates = selectedFeature.geometry.coordinates;
+    /**
+     * Name of the narrating character of the selected geo-object used to set the color of the marker icon
+     */
     const markerColor = selectedFeature.properties.person.toLowerCase();
 
+    /**
+     * Icon of the marker shown on the map when a geo-object is selected
+     */
     const icon = L.divIcon({
         html: `<i class="bi bi-chat-left-dots-fill" style="color:var(--${markerColor});font-size:1.6rem"/>`,
         className: 'story-icon',

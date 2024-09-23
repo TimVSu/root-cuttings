@@ -5,12 +5,32 @@ import ContentBox from './../ContentBox';
 import image from './../../data/H3/working.png';
 import './css/H3.css';
 
+/**
+ * Component displaying the text, location description, image, character bio, and visual effects related to the narrative fragment H3
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function H3({ feature, setFeatureFocus }) {
 
+    /**
+     * The Leaflet map object
+     */
     const map = useMap();
+    /**
+     * Coordinates of the selected geo-object
+     */
     const coords = feature.geometry.coordinates;
+    /**
+     * Modified coordinates to fit the layout with the content box
+     */
     const modifiedCoords = [coords[0] - 0.023, coords[1]];
 
+    /** 
+     * Creates a visual effect that simulates an earth quake
+     */
     useEffect(() => {
         let interval1, interval2, interval3;
         setTimeout(() => {
@@ -23,7 +43,7 @@ export default function H3({ feature, setFeatureFocus }) {
             interval3 = setInterval(() => {
                 map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
             }, 80);
-        }, 4000);
+        }, 3000);
         return () => {
             clearInterval(interval1);
             clearInterval(interval2);

@@ -5,12 +5,32 @@ import ContentBox from './../ContentBox';
 import collage from './../../data/D7/collage.jpg';
 import './css/D7.css';
 
+/**
+ * Component displaying the text, location description, image, character bio and interactive UI elements related to the narrative fragment D7.
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function D7({ feature, setFeatureFocus }) {
 
+    /**
+     * State storing a boolean value indicating whether the input prompt is shown
+     */
     const [showModal, setShowModal] = useState(true);
+    /**
+     * State storing a boolean value indicating whether the reply to the user input is shown
+     */
     const [showToast, setShowToast] = useState(false);
+    /**
+     * The Leaflet map object
+     */
     const map = useMap(); 
 
+    /**
+     * Function handling user interaction with the prompt element and paning the map to Frankfurt Airport
+     */
     function handleChoice() {
         setShowModal(false);
         map.flyTo([50.037832541828124, 8.551775972924135 - 0.012]);

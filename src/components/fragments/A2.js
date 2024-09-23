@@ -2,8 +2,19 @@ import L from 'leaflet';
 import { Polyline, Marker } from 'react-leaflet';
 import ContentBox from './../ContentBox';
 
+/**
+ * Component displaying the text, location description, character bio, and geospatial visualizations related to the narrative fragment A2
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function A2({ feature, setFeatureFocus }) {
 
+    /**
+     * Icon for the marker respresenting Darya's house on the map
+     */
     const icon = L.divIcon({
         html: '<i class="bi bi-house-fill" style="color:var(--darya);font-size:1.8rem"/>',
         className: 'house-icon',

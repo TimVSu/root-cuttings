@@ -5,11 +5,28 @@ import natureSound from './../../data/H5/nature.mp3';
 import image from './../../data/H5/gilan_house.JPG';
 import './css/H5.css';
 
+/**
+ * Component displaying the text, location description, image, and character bio and playing the audio related to the narrative fragment H5
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function H5({ feature, setFeatureFocus }) {
 
+    /**
+     * Attribution text for the image
+     */
     const soundAttribution = '100% Nature (Brook Sounds and Birds).mp3 by Sonoquilibrium – https://freesound.org/s/514750/ – License: Attribution NonCommercial 3.0';
+    /**
+     * Attribution text for the sound
+     */
     const imageAttribution = 'Irangilaneh, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons';
 
+    /**
+     * Plays the audio on repeat and pauses it when the content box is closed
+     */
     useEffect(() => {
         const rainAudio = new Audio(natureSound);
         rainAudio.play();

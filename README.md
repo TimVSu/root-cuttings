@@ -1,6 +1,7 @@
 # Root Cuttings
 
-A map-based web application that serves as an interactive multimedia platform for illustrating the experiences of migrants, created by Farimah Karimi.
+A map-based web application that serves as an interactive multimedia platform for illustrating the experiences of migrants, created by Farimah Karimi.\
+The characters and events illustrated in this app are fictional and were created for demonstrative purposes.
 
 Node.js is required to run the app locally.\
 See [https://nodejs.org/en/learn/getting-started/how-to-install-nodejs](https://nodejs.org/en/learn/getting-started/how-to-install-nodejs) for more information.

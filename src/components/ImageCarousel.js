@@ -1,8 +1,15 @@
 import { Carousel, Image } from 'react-bootstrap';
 import './css/ImageCarousel.css';
+import React from 'react';
 
+/**
+ * Component displaying an image slide show
+ * 
+ * @param {object} props 
+ * @param {Array} props.images The images to be displayed
+ * @returns {React.JSX.Element}
+ */
 export default function ImageCarousel({ images }) {
-
 
     return (
         <Carousel 

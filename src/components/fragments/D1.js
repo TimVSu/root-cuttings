@@ -11,11 +11,28 @@ import img6 from './../../data/D1/photos/6_picknick.png';
 import img7 from './../../data/D1/photos/7_teenagers.png';
 import img8 from './../../data/D1/photos/8_older.png';
 
+/**
+ * Component displaying the text, location description, images, character bio, and visual effects related to the narrative fragment D1
+ * 
+ * @param {object} props 
+ * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
+ * @returns {React.JSX.Element}
+ */
 export default function D1({ feature, setFeatureFocus }) {
 
+    /**
+     * The images to be displayed in the slide show
+     */
     const images = [img1, img2, img3, img4, img5, img6, img7, img8];
+    /**
+     * The Leaflet map object
+     */
     const map = useMap();
 
+    /**
+     * Slowly pans the map towards Teheran
+     */
     useEffect(() => {
         map.panTo([35.73407393552157, 51.401564933532534], { animate: true, duration: 400, easeLinearity: 1 });
     });

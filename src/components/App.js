@@ -6,12 +6,33 @@ import PlaceList from './PlaceList';
 import InfoToast from './InfoToast';
 import './css/App.css';
 
-export const MapCenter = [40.637262, 32.083669];
+/**
+ * Coordinates of the initial map center
+ */
+export const mapCenter = [40.637262, 32.083669];
 
+/**
+ * Initial zoom level of the map
+ */
+export const mapZoom = 4.5;
+
+/**
+ * Component displaying the map container and all embedded child elements
+ * 
+ * @returns {React.JSX.Element}
+ */
 export default function App() {
-
+    /**
+     * State storing the geo-object that was clicked on by the user
+     */
     const [selectedFeature, setSelectedFeature] = useState(null);
+    /**
+     * State storing a boolean value indicating whether a geo-object is currently selected or not, used for conditionally displaying child components
+     */
     const [featureFocus, setFeatureFocus] = useState(false);
+    /** 
+     * Object storing the URL and attribution for the map tiles
+     */
     const esriWorldImagery = {
         url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
         attribution: 'Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
@@ -20,7 +41,7 @@ export default function App() {
     return (
         <MapContainer
             className='map-container'
-            center={MapCenter}
+            center={mapCenter}
             zoomControl={false}
             zoom={4.5}
             minZoom={4.5}
