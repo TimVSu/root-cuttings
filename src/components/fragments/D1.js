@@ -18,7 +18,7 @@ export default function D1({ feature, setFeatureFocus }) {
     const map = useMap()
 
     useEffect(() => {
-        map.panTo([35.73407393552157, 51.401564933532534], {animate: true, duration: 300, easeLinearity: 1});
+        map.panTo([35.73407393552157, 51.401564933532534], {animate: true, duration: 400, easeLinearity: 1});
     });
 
 

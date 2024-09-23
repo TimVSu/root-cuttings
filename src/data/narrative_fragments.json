@@ -7,7 +7,7 @@
         "properties": {        
           "marker_location": "Köln",
           "person": "Darya",
-          "text": "Ich habe eine Abendroutine: Alte Fotos durchschauen. Am spannendsten sind die gescannten Analogfotos aus dem Iran. Sie zeigen Zeiten, in denen die Familie zusammen war, Hochzeiten, Ausflüge und Geburtstagsfeier der Enkelkinder. Ich gucke mir die Kleidung, die Einrichtung, die Zimmerpflanzen und die Gesichtsausdrücke ganz genau an und versuche, Erkenntnisse daraus zu ziehen. Sehen die Erwachsenen glücklich aus? Sehe ich meinen Großeltern ähnlich? Sieht man in ihren Gesichtern eine Ahnung darüber, wie die Dinge verlaufen würden? So gerne würde ich ihnen meine ganzen Fragen stellen, doch wir sprechen nicht die gleiche Sprache, sind nicht am gleichen Ort. Es liegt zu viel Distanz zwischen uns. So bleiben mir nur die gescannten Fotos und die Erinnerungsgegenstände, die ich akribisch nach enthüllenden Merkmalen untersuche."
+          "text": "Ich habe eine Abendroutine: Alte Fotos durchschauen. Am spannendsten sind die gescannten Analogfotos aus dem Iran. Sie zeigen Zeiten, in denen die Familie zusammen war – Hochzeiten, Ausflüge und Geburtstagsfeier der Enkelkinder. Ich gucke mir die Kleidung, die Einrichtung, die Zimmerpflanzen und die Gesichtsausdrücke ganz genau an und versuche, Erkenntnisse daraus zu ziehen. Sehen die Erwachsenen glücklich aus? Sehe ich meinen Großeltern ähnlich? Sieht man in ihren Gesichtern eine Ahnung darüber, wie die Dinge verlaufen würden? So gerne würde ich ihnen meine ganzen Fragen stellen, doch wir sprechen nicht die gleiche Sprache, sind nicht am gleichen Ort. Es liegt zu viel Distanz zwischen uns. So bleiben mir nur die gescannten Fotos und die Erinnerungsgegenstände, die ich akribisch nach enthüllenden Merkmalen untersuche."
         },
         "geometry": {
           "coordinates": [
@@ -43,8 +43,8 @@
         },
         "geometry": {
           "coordinates": [
-            6.942525094061989,
-            50.93186206999367
+            6.940482980228192,
+            50.93110424751466
           ],
           "type": "Point"
         }
@@ -55,7 +55,7 @@
         "properties": {
           "marker_location": "Speyer",
           "person": "Darya",
-          "text": "In den letzten Jahren war ich paarmal wieder in Speyer, um Schulfreund*innen zu besuchen. Schon bei der Ankunft am Bahnhof lief mir ein Schauer über den Rücken. Speyer war der Ort der nassen Kälte, der Ort, wo Träume zugrunde gehen. Als ich 2010 da ankam, kam mir die Welt noch verwirrender vor als davor schon. Jetzt habe ich Worte für das, was mir zuteilwurde: Rassismus, Klassismus, überforderte, depressive Eltern, problematisches Schulsystem, voreingenommene, ahnungslose Lehrer*innen, im Stich gelassene Schulkamerad*innen.\nDoch alles, was mein 12-jähriges Ich fühlte, waren Ablehnung, Orientierungslosigkeit, Fremdheit und wie sehr ich meine Familie, Freundinnen und Leben im Iran vermisse. Ich habe nicht verstanden, warum meine Eltern sich nicht für mich interessieren, warum meine Mitschüler*innen so gemein zu mir sind und warum die Lehrer*innen so wenig an mich glauben. Speyer war klein, kalt und grau und ich bin jeden Tag dankbar dafür, dass ich es rausgeschafft habe."
+          "text": "In den letzten Jahren war ich paarmal wieder in Speyer, um Schulfreund*innen zu besuchen. Schon bei der Ankunft am Bahnhof lief mir ein Schauer über den Rücken. Speyer war der Ort der nassen Kälte, der Ort, wo Träume zugrunde gehen. Als ich 2010 da ankam, kam mir die Welt noch verwirrender vor als davor schon. Jetzt habe ich Worte für das, was mir zuteilwurde: Rassismus, Klassismus, überforderte, depressive Eltern, problematisches Schulsystem, voreingenommene, ahnungslose Lehrer*innen, im Stich gelassene Schulkamerad*innen.\n\nDoch alles, was mein 12-jähriges Ich fühlte, waren Ablehnung, Orientierungslosigkeit, Fremdheit und wie sehr ich meine Familie, Freundinnen und Leben im Iran vermisse. Ich habe nicht verstanden, warum meine Eltern sich nicht für mich interessieren, warum meine Mitschüler*innen so gemein zu mir sind und warum die Lehrer*innen so wenig an mich glauben. Speyer war klein, kalt und grau und ich bin jeden Tag dankbar dafür, dass ich es rausgeschafft habe."
         },
         "geometry": {
           "coordinates": [
@@ -71,7 +71,7 @@
         "properties": {
           "marker_location": "Qeshm",
           "person": "Darya",
-          "text": "Qeshm. Insel der Fantasien, so trügerisch. Kennst du das, wenn du in deinem Herkunftsland Urlaub machst und dich fragst, warum ihr jemals weggezogen seid? Warum deine Eltern jemals diesen himmlischen Ort verlassen haben? Hier spürst du dich, hier fühlst du dich frei und lebendig. Es fühlt sich vertraut und trotzdem abenteuerlich an!\n\nUnd dann kehrt langsam wieder die Erinnerung ein. Du bist in die Rolle einer Touristin geschlüpft, hast das Privileg erworben, dich wie ein Touristin zu fühlen. Aber pass auf, wenn du zu lange hier verweilst, wenn sie dich erwischen, bist du wieder Darya Kazemi, Bürgerin der Islamischen Republik Iran."
+          "text": "Qeshm. Insel der Fantasien, so trügerisch. Kennst du das, wenn du in deinem Herkunftsland Urlaub machst und dich fragst, warum ihr jemals weggezogen seid? Warum deine Eltern jemals diesen himmlischen Ort verlassen haben? Hier spürst du dich, hier fühlst du dich frei und lebendig. Es fühlt sich vertraut und trotzdem abenteuerlich an!\n\nUnd dann kehrt langsam wieder die Erinnerung ein. Du bist in die Rolle einer Touristin geschlüpft, hast das Privileg erworben, dich wie eine Touristin zu fühlen. Aber pass auf, wenn du zu lange hier verweilst, wenn sie dich erwischen, bist du wieder Darya Kazemi, Bürgerin der Islamischen Republik Iran."
         },
         "geometry": {
           "coordinates": [
@@ -119,7 +119,7 @@
         "properties": {        
           "marker_location": "Münster",
           "person": "Azar",
-          "text": "Darya hat immer weniger Zeit für mich, meistens ist sie mit ihrem Freund oder ihren Kommiliton*innen unterwegs. Als sie klein war und wir beide im Iran gelebt haben, waren wir richtig close. Sie sagt mir immer, ich sollte raus in die Welt, mich mehr zeigen, trauen, neue Menschen kennenlernen. Für sie ist das natürlich leicht. Sie spricht perfekt Deutsch, versteht die Deutschen. Sie verstehen mich aber nicht. Und jetzt hat die Person, die mich am besten verstehen könnte, die meine Geschichte, unsere Familie kennt, keine Zeit mehr für mich."
+          "text": "Darya hat immer weniger Zeit für mich, meistens ist sie mit ihrem Freund oder ihren Kommiliton*innen unterwegs. Als sie klein war und wir beide im Iran gelebt haben, waren wir richtig close.\n\nSie sagt mir immer, ich sollte raus in die Welt, mich mehr zeigen, trauen, neue Menschen kennenlernen. Für sie ist das natürlich leicht. Sie spricht perfekt Deutsch, versteht die Deutschen. Sie verstehen mich aber nicht. Und jetzt hat die Person, die mich am besten verstehen könnte, die meine Geschichte, unsere Familie kennt, keine Zeit mehr für mich."
         },
         "geometry": {
           "coordinates": [
@@ -215,7 +215,7 @@
         "properties": {        
           "marker_location": "Gilan",
           "person": "Hadi",
-          "text": "Ich habe mich in Deutschland nie zuhause gefühlt, war immer am Rennen.\nDie kleine Hoffnung, am Ende dieses Rennens wieder zuhause im Iran anzukommen, hat mir Kraft gespendet. Eines Tages, wenn die Kinder alle erwachsen und selbstständig sind. Ich würde ein großes Haus oder mindestens eine Wohnung im Norden kaufen, wo die ganze Familie den Sommer verbringen, Ausflüge ans Meer und in den Wald machen kann. Wir würden jedes Wochenende auf der Terrasse Kabab grillen, für die Kinder gibt es natürlich Maiskolben, sie essen ja kein Fleisch. Meine Frau Simin würde das ganze Haus mit Pflanzen schmücken und Kräuter und Gemüse anbauen. Vielleicht können wir auch ein, zwei Hühner halten.\n\nDas sind aber wieder nur Träumereien, für ein Haus im Norden hätte ich vor Jahrzehnen anfangen müssen, Geld zurückzulegen."
+          "text": "Ich habe mich in Deutschland nie zuhause gefühlt, war immer am Rennen.\nDie kleine Hoffnung, am Ende dieses Rennens wieder zuhause im Iran anzukommen, hat mir Kraft gespendet – eines Tages, wenn die Kinder alle erwachsen und selbstständig sind. Ich würde ein großes Haus oder mindestens eine Wohnung im Norden kaufen, wo die ganze Familie den Sommer verbringen, Ausflüge ans Meer und in den Wald machen kann. Wir würden jedes Wochenende auf der Terrasse Kabab grillen, für die Kinder gibt es natürlich Maiskolben, sie essen ja kein Fleisch. Meine Frau Simin würde das ganze Haus mit Pflanzen schmücken und Kräuter und Gemüse anbauen. Vielleicht können wir auch ein, zwei Hühner halten.\n\nDas sind aber wieder nur Träumereien, für ein Haus im Norden hätte ich vor Jahrzehnen anfangen müssen, Geld zurückzulegen."
         },
         "geometry": {
           "coordinates": [

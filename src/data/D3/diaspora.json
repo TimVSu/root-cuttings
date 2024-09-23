@@ -98,6 +98,20 @@
           "type": "Point"
         },
         "id": 6
+      },
+      {
+        "type": "Feature",
+        "properties": {
+          "name": "Bistro Leckerwich"
+        },
+        "geometry": {
+          "coordinates": [
+            6.938726882080671,
+            50.930748866157266
+          ],
+          "type": "Point"
+        },
+        "id": 7
       }
     ]
   }

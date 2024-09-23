@@ -1,0 +1,8 @@
+#h3-image {
+    height: 180px;
+    border: solid;
+    border-color: var(--accent);
+    border-width: 2px;
+    margin: auto;
+    margin-bottom: 20px;
+}

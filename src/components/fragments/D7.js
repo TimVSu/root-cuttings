@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useMap } from 'react-leaflet/hooks';
-import { Button, Stack, Modal, Toast } from 'react-bootstrap';
+import { Button, Stack, Modal, Toast, Image } from 'react-bootstrap';
 import ContentBox from './../ContentBox';
+import collage from './../../data/D7/collage.jpg';
 import './css/D7.css';
 
 export default function D7({ feature, setFeatureFocus }) {
@@ -39,6 +40,12 @@ export default function D7({ feature, setFeatureFocus }) {
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus}>                
+                <div className="d-flex justify-content-center">
+                    <Image 
+                        id="d7-image"
+                        src={collage}
+                        rounded/>
+                </div>                
                 <span 
                     style={{color: "var(--primary)", fontSize: "8pt"}}>
                     Auf der Karte ist der Imam Khomeini-Flughafen in Teheran markiert.<br/>

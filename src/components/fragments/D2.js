@@ -5,7 +5,6 @@ import ContentBox from './../ContentBox';
 import ImageCarousel from './../ImageCarousel';
 import dtl from './../../data/D2/germany_overlay.png';
 import img1 from './../../data/D2/photos/1.jpeg';
-import img2 from './../../data/D2/photos/2.jpeg';
 import img3 from './../../data/D2/photos/3.jpeg';
 import img4 from './../../data/D2/photos/4.jpeg';
 import img5 from './../../data/D2/photos/5.jpeg';
@@ -20,7 +19,7 @@ export default function D2({ feature, setFeatureFocus }) {
     const map = useMap();
     const nwBound = [38.585562030270566, 48.812176662525934];
     const seBound = [26.10270924957595, 60.06376547836262];
-    const IMAGES = [img1, img2, img3, img4, img5, img6, img7, img8];
+    const IMAGES = [img1, img3, img4, img5, img6, img7, img8];
 
 
     useEffect(() => {

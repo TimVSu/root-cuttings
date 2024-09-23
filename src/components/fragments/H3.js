@@ -1,6 +1,9 @@
 import { useEffect } from 'react';
 import { useMap } from 'react-leaflet/hooks';
+import { Image } from 'react-bootstrap';
 import ContentBox from './../ContentBox';
+import image from './../../data/H3/working.png';
+import './css/H3.css';
 
 export default function H3({ feature, setFeatureFocus }) {
 
@@ -37,10 +40,17 @@ export default function H3({ feature, setFeatureFocus }) {
                 narrativeFragment={properties.text}
                 person={properties.person}
                 setFeatureFocus={setFeatureFocus}>
-                <span 
-                    style={{color: "var(--primary)", fontSize: "8pt"}}>
+                <p 
+                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
                     Auf der Karte ist das Dorf Aghuzlu markiert, aus dem Hadis Eltern stammen.<br/>
-                </span>
+                    <br/>
+                </p>
+                <div className="d-flex justify-content-center">
+                    <Image 
+                        id='h3-image' 
+                        src={image}
+                        rounded/>
+                </div>
             </ContentBox>
         </div>
   );
