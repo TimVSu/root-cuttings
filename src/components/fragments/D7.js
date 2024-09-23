@@ -9,11 +9,11 @@ export default function D7({ feature, setFeatureFocus }) {
 
     const [showModal, setShowModal] = useState(true);
     const [showToast, setShowToast] = useState(false);
-    const map = useMap();const properties = feature.properties;
+    const map = useMap(); 
 
-    function handleChoice () {
+    function handleChoice() {
         setShowModal(false);
-        map.flyTo([50.037832541828124, 8.551775972924135-0.012]);
+        map.flyTo([50.037832541828124, 8.551775972924135 - 0.012]);
         setTimeout(() => {
             setShowToast(true);
         }, 6000)
@@ -24,37 +24,37 @@ export default function D7({ feature, setFeatureFocus }) {
             <Toast
                 show={showToast}>
                 <Button
-                    variant="link"
-                    id="close-toast"
+                    variant='link'
+                    id='close-toast'
                     onClick={() => setShowToast(false)}>
                     x
                 </Button>
                 <Toast.Body
-                    className="mt-3">
-                    Das war eine rhetorische Frage.
-                    <br />
+                    className='mt-3'>
+                    Das war eine rhetorische Frage.<br />
                     Willkommen in Deutschland!
                 </Toast.Body>
             </Toast>
             <ContentBox
-                narrativeFragment={properties.text}
-                person={properties.person}
-                setFeatureFocus={setFeatureFocus}>                
-                <div className="d-flex justify-content-center">
-                    <Image 
-                        id="d7-image"
+                narrativeFragment={feature.properties.text}
+                person={feature.properties.person}
+                setFeatureFocus={setFeatureFocus}>
+                <div 
+                    className='d-flex justify-content-center'>
+                    <Image
+                        id='d7-image'
                         src={collage}
-                        rounded/>
-                </div>                
-                <span 
-                    style={{color: "var(--primary)", fontSize: "8pt"}}>
-                    Auf der Karte ist der Imam Khomeini-Flughafen in Teheran markiert.<br/>
+                        rounded />
+                </div>
+                <span
+                    style={{ color: 'var(--primary)', fontSize: '8pt' }}>
+                    Auf der Karte ist der Imam Khomeini-Flughafen in Teheran markiert.<br />
                 </span>
             </ContentBox>
 
             <Modal
                 show={showModal}
-                backdrop="static"
+                backdrop='static'
                 keyboard={false}
                 centered>
                 <Modal.Body>
@@ -80,5 +80,5 @@ export default function D7({ feature, setFeatureFocus }) {
                 </Modal.Body>
             </Modal>
         </div>
-  );
+    );
 }

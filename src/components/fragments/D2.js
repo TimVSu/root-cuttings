@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { useMap } from 'react-leaflet/hooks'
+import { useMap } from 'react-leaflet/hooks';
 import { ImageOverlay } from 'react-leaflet/ImageOverlay';
 import ContentBox from './../ContentBox';
 import ImageCarousel from './../ImageCarousel';
@@ -15,38 +15,37 @@ import './css/D2.css';
 
 export default function D2({ feature, setFeatureFocus }) {
 
-    const properties = feature.properties;
     const map = useMap();
     const nwBound = [38.585562030270566, 48.812176662525934];
     const seBound = [26.10270924957595, 60.06376547836262];
-    const IMAGES = [img1, img3, img4, img5, img6, img7, img8];
+    const images = [img1, img3, img4, img5, img6, img7, img8];
 
 
     useEffect(() => {
         setTimeout(() => {
-            map.flyToBounds([[nwBound[0], nwBound[1]-7], [seBound[0], seBound[1]-7]]);
+            map.flyToBounds([[nwBound[0], nwBound[1] - 7], [seBound[0], seBound[1] - 7]]);
         }, 4000);
     });
 
     return (
         <div>
             <ContentBox
-                narrativeFragment={properties.text}
-                person={properties.person}
+                narrativeFragment={feature.properties.text}
+                person={feature.properties.person}
                 setFeatureFocus={setFeatureFocus}>
-                <p 
-                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
-                    Auf der Karte ist der Saei-Park – Daryas Lieblingspark in der Nähe der ehemaligen Wohnung ihrer Familie – in Teheren markiert.<br/>
-                    <br/>
+                <p
+                    style={{ color: 'var(--primary)', fontSize: '8pt', marginTop: '-10px' }}>
+                    Auf der Karte ist der Saei-Park – Daryas Lieblingspark in der Nähe der ehemaligen Wohnung ihrer Familie – in Teheren markiert.<br />
+                    <br />
                 </p>
-                <ImageCarousel 
-                    images={IMAGES}/>
+                <ImageCarousel
+                    images={images} />
             </ContentBox>
-            <ImageOverlay 
-                url={dtl} 
+            <ImageOverlay
+                url={dtl}
                 zIndex={900}
                 bounds={[nwBound, seBound]}
-                />
+            />
         </div>
-  );
+    );
 }

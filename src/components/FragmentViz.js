@@ -19,53 +19,53 @@ export default function FragmentViz({ selectedFeature, setFeatureFocus }) {
 
     const coordinates = selectedFeature.geometry.coordinates;
     const markerColor = selectedFeature.properties.person.toLowerCase();
-    
+
     const icon = L.divIcon({
         html: `<i class="bi bi-chat-left-dots-fill" style="color:var(--${markerColor});font-size:1.6rem"/>`,
         className: 'story-icon',
-        iconAnchor: [0,30]
+        iconAnchor: [0, 30]
     });
 
     return (
         <div>
-            <Marker 
+            <Marker
                 position={[coordinates[1], coordinates[0]]}
                 icon={icon}
-                interactive={false} />  
+                interactive={false} />
             {(() => {
                 switch (selectedFeature.id) {
                     case 'A1':
-                        return <A1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <A1 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'A2':
-                        return <A2 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <A2 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'A3':
-                        return <A3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <A3 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'A4':
-                        return <A4 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <A4 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'D1':
-                        return <D1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <D1 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'D2':
-                        return <D2 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <D2 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'D3':
-                        return <D3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <D3 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'D5':
-                        return <D5 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <D5 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'D6':
-                        return <D6 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <D6 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'D7':
-                        return <D7 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <D7 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'H1':
-                        return <H1 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <H1 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'H3':
-                        return <H3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <H3 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'H4':
-                        return <H4 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <H4 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     case 'H5':
-                        return <H5 feature={selectedFeature} setFeatureFocus={setFeatureFocus}/>
+                        return <H5 feature={selectedFeature} setFeatureFocus={setFeatureFocus} />
                     default:
                         return null
                 }
-            })()}          
+            })()}
         </div>
     );
 }

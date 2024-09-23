@@ -1,9 +1,5 @@
-/* .leaflet-tile {
-    filter: grayscale(80%) !important;
-} */
-
 #attribution {
-    font-size: 6pt; 
+    font-size: 6pt;
     color: var(--primary);
 }
 

@@ -1,6 +1,6 @@
 #place-stack {
     width: 200px;
-    z-index: 500;
+    z-index: 400;
     position: relative;
     margin: 10px;
 }

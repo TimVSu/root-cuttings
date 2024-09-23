@@ -1,4 +1,4 @@
-.mapcontainer {
+.map-container {
     position: absolute;
     top: 0;
     bottom: 0;
@@ -10,7 +10,8 @@
     border: none !important;
 }
 
-.leaflet-control-zoom-in, .leaflet-control-zoom-out {
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
     background-color: var(--background) !important;
     color: var(--text) !important;
     border: 1px solid var(--text) !important;

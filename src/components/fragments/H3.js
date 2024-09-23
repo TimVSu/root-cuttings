@@ -8,50 +8,49 @@ import './css/H3.css';
 export default function H3({ feature, setFeatureFocus }) {
 
     const map = useMap();
-    const properties = feature.properties;
     const coords = feature.geometry.coordinates;
-    const modifiedCoords = [coords[0]-0.023, coords[1]]
+    const modifiedCoords = [coords[0] - 0.023, coords[1]];
 
     useEffect(() => {
         let interval1, interval2, interval3;
-
-        setTimeout(()=> {
+        setTimeout(() => {
             interval1 = setInterval(() => {
-                map.setView([modifiedCoords[1]-0.0013, modifiedCoords[0]+0.0011]);
+                map.setView([modifiedCoords[1] - 0.0013, modifiedCoords[0] + 0.0011]);
             }, 90);
             interval2 = setInterval(() => {
-                map.setView([modifiedCoords[1]-0.00099, modifiedCoords[0]-0.001]);
+                map.setView([modifiedCoords[1] - 0.00099, modifiedCoords[0] - 0.001]);
             }, 75);
             interval3 = setInterval(() => {
-                map.setView([modifiedCoords[1]+0.00089, modifiedCoords[0]+0.001]);
+                map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
             }, 80);
         }, 4000);
         return () => {
             clearInterval(interval1);
             clearInterval(interval2);
             clearInterval(interval3);
-            };
+        };
     });
 
 
     return (
         <div>
             <ContentBox
-                narrativeFragment={properties.text}
-                person={properties.person}
+                narrativeFragment={feature.properties.text}
+                person={feature.properties.person}
                 setFeatureFocus={setFeatureFocus}>
-                <p 
-                    style={{color: "var(--primary)", fontSize: "8pt", marginTop: "-10px"}}>
-                    Auf der Karte ist das Dorf Aghuzlu markiert, aus dem Hadis Eltern stammen.<br/>
-                    <br/>
+                <p
+                    style={{ color: 'var(--primary)', fontSize: '8pt', marginTop: '-10px' }}>
+                    Auf der Karte ist das Dorf Aghuzlu markiert, aus dem Hadis Eltern stammen.<br />
+                    <br />
                 </p>
-                <div className="d-flex justify-content-center">
-                    <Image 
-                        id='h3-image' 
+                <div 
+                    className='d-flex justify-content-center'>
+                    <Image
+                        id='h3-image'
                         src={image}
-                        rounded/>
+                        rounded />
                 </div>
             </ContentBox>
         </div>
-  );
+    );
 }

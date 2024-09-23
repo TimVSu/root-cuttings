@@ -1,12 +1,10 @@
 import { useEffect } from 'react';
 import ContentBox from './../ContentBox';
 import birds from './../../data/D6/Qeshm.m4a';
-import  azan from './../../data/D6/Azan_Qeshm.m4a';
+import azan from './../../data/D6/Azan_Qeshm.m4a';
 import './css/D6.css';
 
 export default function D6({ feature, setFeatureFocus }) {
-
-    const properties = feature.properties;
 
     useEffect(() => {
         const azanAudio = new Audio(azan);
@@ -25,17 +23,18 @@ export default function D6({ feature, setFeatureFocus }) {
 
     return (
         <div>
-            <div id='sunny-overlay'/>
+            <div 
+                id='sunny-overlay' />
             <ContentBox
-                narrativeFragment={properties.text}
-                person={properties.person}
+                narrativeFragment={feature.properties.text}
+                person={feature.properties.person}
                 setFeatureFocus={setFeatureFocus}>
-                <span 
-                    style={{color: "var(--primary)", fontSize: "8pt"}}>
-                    Auf der Karte ist Hengam, eine Nebeninsel von Qeschm im Persischen Golf markiert.<br/>
-                    <br/>
+                <span
+                    style={{ color: 'var(--primary)', fontSize: '8pt' }}>
+                    Auf der Karte ist Hengam, eine Nebeninsel von Qeschm im Persischen Golf markiert.<br />
+                    <br />
                 </span>
             </ContentBox>
         </div>
-  );
+    );
 }

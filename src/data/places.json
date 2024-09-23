@@ -1,103 +1,103 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Köln, DE"
-        },
-        "geometry": {
-          "coordinates": [
-            50.93798545005373,
-            6.960152994896504
-          ],
-          "type": "Point"
-        },
-        "id": 0
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Köln, DE"
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Münster, DE"
-        },
-        "geometry": {
-          "coordinates": [
-            51.96190166840137,
-            7.630223304752036
-          ],
-          "type": "Point"
-        },
-        "id": 1
+      "geometry": {
+        "coordinates": [
+          50.93798545005373,
+          6.960152994896504
+        ],
+        "type": "Point"
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Speyer, DE"
-        },
-        "geometry": {
-          "coordinates": [
-            49.325062265539884,
-            8.43965634304505
-          ],
-          "type": "Point"
-        },
-        "id": 2
+      "id": 0
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Münster, DE"
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Teheran, IR"
-        },
-        "geometry": {
-          "coordinates": [
-            35.576536396238275, 
-            51.298852757005115
-          ],
-          "type": "Point"
-        },
-        "id": 3
+      "geometry": {
+        "coordinates": [
+          51.96190166840137,
+          7.630223304752036
+        ],
+        "type": "Point"
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Gilan, IR"
-        },
-        "geometry": {
-          "coordinates": [
-            37.19817276405669,
-            50.07663567325639
-          ],
-          "type": "Point"
-        },
-        "id": 4
+      "id": 1
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Speyer, DE"
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Zandschan, IR"
-        },
-        "geometry": {
-          "coordinates": [
-            35.862200,
-            48.528583
-          ],
-          "type": "Point"
-        },
-        "id": 5
+      "geometry": {
+        "coordinates": [
+          49.325062265539884,
+          8.43965634304505
+        ],
+        "type": "Point"
       },
-      {
-        "type": "Feature",
-        "properties": {
-          "name": "Qeschm, IR"
-        },
-        "geometry": {
-          "coordinates": [
-            26.6158725032075,
-            55.88219398139495
-          ],
-          "type": "Point"
-        },
-        "id": 6
-      }
-    ]
-  }
+      "id": 2
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Teheran, IR"
+      },
+      "geometry": {
+        "coordinates": [
+          35.576536396238275,
+          51.298852757005115
+        ],
+        "type": "Point"
+      },
+      "id": 3
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gilan, IR"
+      },
+      "geometry": {
+        "coordinates": [
+          37.19817276405669,
+          50.07663567325639
+        ],
+        "type": "Point"
+      },
+      "id": 4
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zandschan, IR"
+      },
+      "geometry": {
+        "coordinates": [
+          35.862200,
+          48.528583
+        ],
+        "type": "Point"
+      },
+      "id": 5
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Qeschm, IR"
+      },
+      "geometry": {
+        "coordinates": [
+          26.6158725032075,
+          55.88219398139495
+        ],
+        "type": "Point"
+      },
+      "id": 6
+    }
+  ]
+}

@@ -1,229 +1,229 @@
 {
-    "type": "FeatureCollection",
-    "features": [
-      {
-        "id": "D1",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Köln",
-          "person": "Darya",
-          "text": "Ich habe eine Abendroutine: Alte Fotos durchschauen. Am spannendsten sind die gescannten Analogfotos aus dem Iran. Sie zeigen Zeiten, in denen die Familie zusammen war – Hochzeiten, Ausflüge und Geburtstagsfeier der Enkelkinder. Ich gucke mir die Kleidung, die Einrichtung, die Zimmerpflanzen und die Gesichtsausdrücke ganz genau an und versuche, Erkenntnisse daraus zu ziehen. Sehen die Erwachsenen glücklich aus? Sehe ich meinen Großeltern ähnlich? Sieht man in ihren Gesichtern eine Ahnung darüber, wie die Dinge verlaufen würden? So gerne würde ich ihnen meine ganzen Fragen stellen, doch wir sprechen nicht die gleiche Sprache, sind nicht am gleichen Ort. Es liegt zu viel Distanz zwischen uns. So bleiben mir nur die gescannten Fotos und die Erinnerungsgegenstände, die ich akribisch nach enthüllenden Merkmalen untersuche."
-        },
-        "geometry": {
-          "coordinates": [
-            6.9507913696124035,
-            50.96099513916005
-          ],
-          "type": "Point"
-        }
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "id": "D1",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Köln",
+        "person": "Darya",
+        "text": "Ich habe eine Abendroutine: Alte Fotos durchschauen. Am spannendsten sind die gescannten Analogfotos aus dem Iran. Sie zeigen Zeiten, in denen die Familie zusammen war – Hochzeiten, Ausflüge und Geburtstagsfeier der Enkelkinder. Ich gucke mir die Kleidung, die Einrichtung, die Zimmerpflanzen und die Gesichtsausdrücke ganz genau an und versuche, Erkenntnisse daraus zu ziehen. Sehen die Erwachsenen glücklich aus? Sehe ich meinen Großeltern ähnlich? Sieht man in ihren Gesichtern eine Ahnung darüber, wie die Dinge verlaufen würden? So gerne würde ich ihnen meine ganzen Fragen stellen, doch wir sprechen nicht die gleiche Sprache, sind nicht am gleichen Ort. Es liegt zu viel Distanz zwischen uns. So bleiben mir nur die gescannten Fotos und die Erinnerungsgegenstände, die ich akribisch nach enthüllenden Merkmalen untersuche."
       },
-      {
-        "id": "D2",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Teheran",
-          "person": "Darya",
-          "text": "Als ich jünger war, habe ich oft von einem fantastischen Land geträumt, der Verschmelzung von Iran und Deutschland. Als ich etwas älter wurde, habe ich davon fantasiert, wie ich in Deutschland eingestellt bin aber im Iran lebe, das Land entdecke und Abenteuer erlebe; das Leben in Deutschland hat sich temporär angefühlt, zweckgebunden.\n\nDas letzte Mal war ich vor fünf Jahren im Iran, seitdem ist sehr viel passiert. Ich weiß nicht, wann und wie ich Iran wieder besuchen werde. Ich weiß nur, dass die Distanz zwischen uns immer größer wurde. Und doch sehne ich mich oft zurück in die Nachbarschaft meiner Kindheit, nach den Straßenkatzen, den Bergen am Horizont, der Norouz-Stimmung und dem Essen. Und ich weiß, dass das Gefühl, wonach ich mich sehne, unerreichbar ist."
-        },
-        "geometry": {
-          "coordinates": [
-            51.41066016498163,
-            35.73629405409138 
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "D3",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Köln",
-          "person": "Darya",
-          "text": "Ich kann nur eine Handvoll iranische Gerichte kochen. Das Winterfest feiere ich immer seltener und mein Haftsin sieht dürftig aus. Meine persische Handschrift ist miserabel und Hafis kann ich auch nur stockend vorlesen. Meine Sprachkenntnisse sind auf dem Niveau einer Teenagerin hängen geblieben und in iranischen Restaurants habe ich immer Angst, den Verhaltenskodex zu verletzen.\n\nIch habe mich echt bemüht: Bei jeder Reise in den Iran habe ich Bücher über die Geschichte des Landes mitgebracht, ich habe in meinem Auslandssemester Kurse über persische Literatur belegt und in meinem Studium Hausarbeiten über die Sprache und Kultur geschrieben. Habe Anschluss an die diasporische Community gesucht und an einem Kalligrafie-Kurs teilgenommen.\n\nDoch wie schafft man es, in einer neuen Welt anzukommen, ohne die alte ein Stück weit zu verlieren?"
-        },
-        "geometry": {
-          "coordinates": [
-            6.940482980228192,
-            50.93110424751466
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "D5",
-        "type": "Feature",
-        "properties": {
-          "marker_location": "Speyer",
-          "person": "Darya",
-          "text": "In den letzten Jahren war ich paarmal wieder in Speyer, um Schulfreund*innen zu besuchen. Schon bei der Ankunft am Bahnhof lief mir ein Schauer über den Rücken. Speyer war der Ort der nassen Kälte, der Ort, wo Träume zugrunde gehen. Als ich 2010 da ankam, kam mir die Welt noch verwirrender vor als davor schon. Jetzt habe ich Worte für das, was mir zuteilwurde: Rassismus, Klassismus, überforderte, depressive Eltern, problematisches Schulsystem, voreingenommene, ahnungslose Lehrer*innen, im Stich gelassene Schulkamerad*innen.\n\nDoch alles, was mein 12-jähriges Ich fühlte, waren Ablehnung, Orientierungslosigkeit, Fremdheit und wie sehr ich meine Familie, Freundinnen und Leben im Iran vermisse. Ich habe nicht verstanden, warum meine Eltern sich nicht für mich interessieren, warum meine Mitschüler*innen so gemein zu mir sind und warum die Lehrer*innen so wenig an mich glauben. Speyer war klein, kalt und grau und ich bin jeden Tag dankbar dafür, dass ich es rausgeschafft habe."
-        },
-        "geometry": {
-          "coordinates": [
-            8.43965634304505,
-            49.325062265539884
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "D6",
-        "type": "Feature",
-        "properties": {
-          "marker_location": "Qeshm",
-          "person": "Darya",
-          "text": "Qeshm. Insel der Fantasien, so trügerisch. Kennst du das, wenn du in deinem Herkunftsland Urlaub machst und dich fragst, warum ihr jemals weggezogen seid? Warum deine Eltern jemals diesen himmlischen Ort verlassen haben? Hier spürst du dich, hier fühlst du dich frei und lebendig. Es fühlt sich vertraut und trotzdem abenteuerlich an!\n\nUnd dann kehrt langsam wieder die Erinnerung ein. Du bist in die Rolle einer Touristin geschlüpft, hast das Privileg erworben, dich wie eine Touristin zu fühlen. Aber pass auf, wenn du zu lange hier verweilst, wenn sie dich erwischen, bist du wieder Darya Kazemi, Bürgerin der Islamischen Republik Iran."
-        },
-        "geometry": {
-          "coordinates": [
-            55.88219398139495,
-            26.6158725032075
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "D7",
-        "type": "Feature",
-        "properties": {
-          "marker_location": "Teheran",
-          "person": "Darya",
-          "text": "Manchmal fühlt es sich so an, als hätte mich jemand mit Gewalt aus der Erde rausgerissen und hektisch woanders eingepflanzt, ohne einen einzigen Gedanken an die hinterbliebenen Wurzeln zu verlieren."
-        },
-        "geometry": {
-          "coordinates": [
-            51.15562205845783,
-            35.409880175150874
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "A1",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Münster",
-          "person": "Azar",
-          "text": "Ich gucke nicht gerne in den Spiegel. Ich bin darin eh nicht mehr zu sehen. Von mir ist nicht viel übriggeblieben, nur eine verkrümmte Hülle. Es war nichts, wie ich es mir vor meiner Ankunft vorgestellt hatte. Von allem war nur eine leere Hülle da, meiner Familie, der Uni, der Freiheit. So habe ich mich auch in meine Hülle zurückgezogen; das war einfacher, als mir ihre ständigen Vorwürfe anzuhören, dass ich nichts aus mir mache. Haben sie selbst schon mal in den Spiegel geschaut?"
-        },
-        "geometry": {
-          "coordinates": [
-            7.57604542629943,
-            51.96801911756816
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "A2",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Münster",
-          "person": "Azar",
-          "text": "Darya hat immer weniger Zeit für mich, meistens ist sie mit ihrem Freund oder ihren Kommiliton*innen unterwegs. Als sie klein war und wir beide im Iran gelebt haben, waren wir richtig close.\n\nSie sagt mir immer, ich sollte raus in die Welt, mich mehr zeigen, trauen, neue Menschen kennenlernen. Für sie ist das natürlich leicht. Sie spricht perfekt Deutsch, versteht die Deutschen. Sie verstehen mich aber nicht. Und jetzt hat die Person, die mich am besten verstehen könnte, die meine Geschichte, unsere Familie kennt, keine Zeit mehr für mich."
-        },
-        "geometry": {
-          "coordinates": [
-            7.608550,
-            51.963718
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "A3",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Münster",
-          "person": "Azar",
-          "text": "Gestern habe ich Thu nach ihrem Urlaub in unserem Lieblingscafé getroffen. Sie hat mir von ihrer Familie erzählt, die sie in Vietnam besucht hat und ich habe ihr davon erzählt, wie schwierig es ist, einen Job zu finden, der zu meinem Abschluss passt. Ich kenne sie erst seit einem Jahr, aber ich habe das Gefühl, wir kennen uns schon ewig. Sie versteht mich, verurteilt mich nicht. Thu ist hier geboren, aber ich glaube, sie versteht trotzdem, wie es sich anfühlt, Ausländerin zu sein.\n\nSie hat mir ein Souvenir aus Vietnam mitgebracht. Ich hatte ihr vor paar Monaten auch Handwerk aus Schiras zum Geburtstag geschenkt. Wir sind beide große Fans von traditionellem Kunsthandwerk!"
-        },
-        "geometry": {
-          "coordinates": [
-            7.625738176074098,
-            51.946977651802605
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "A4",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Münster",
-          "person": "Azar",
-          "text": "Manchmal schäme ich mich für alles, was ich nicht hinbekomme. Wenn du im Iran lebst, denkst du, dass alles nach der Auswanderung besser wird – Musst du auch, denn sonst fehlt dir die Kraft, das ganze Prozedere für den Visumantrag durchzustehen. Viele sind neidisch auf dich, weil sie denken, dass dir mit dem Visum das Glück in den Schoß gefallen ist. Doch niemand spricht darüber, wie schwierig es ist, wenn du alles hinter dir lässt, was dich ausmacht – deine Freund*innen, deine Sprache, deine Kultur. Alle möchten von der tollen neuen Welt hören, von der Freiheit, dem Wohlstand. Und du schämst dich, denn du fühlst dich überhaupt nicht frei, sondern leer, ängstlich und verloren. Aber du traust dich auch nicht, dich zu beschweren; wie kann ich nur so undankbar sein? Ich habe das, wofür viele ihr Leben riskieren."
-        },
-        "geometry": {
-          "coordinates": [
-            7.627339172114905,
-            51.95476985994904
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "H1",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Speyer",
-          "person": "Hadi",
-          "text": "Es gibt dieses Lied von Kourosh Yaghmaei, „Eisblume“:\n\nچی بخونم جوونیم رفته صدام رفته دیگه\nگل یخ توی دلم جوونه کرده\n\n„Was soll ich singen? Meine Jugend ist dahin, meine Stimme längst verweht. In meinem Herzen blüht die Eisblume.”\n\nIch halte nicht so viel von ihm, er hat kein moralisches Leben geführt. Doch Talent hatte er auf jeden Fall."
-        },
-        "geometry": {
-          "coordinates": [
-            8.42253662958234,
-            49.323545225003755
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "H3",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Zandschan",
-          "person": "Hadi",
-          "text": "Es gab in meinem Leben nicht viel Stabilität und Ruhe. Meine Eltern sind in den 40ern, wie viele andere in der Zeit, von ihrem Dorf in Zandschan nach Teheran gezogen, um Arbeit zu finden. Sie waren beide Analphabeten und sprachen nur wenig Persisch. Als der zweitälteste Sohn musste ich natürlich als Jugendlicher schon anfangen zu arbeiten und Verantwortung für meine jüngeren Geschwister übernehmen. Da bleibt nicht viel Zeit übrig für Schule und andere Spielereien. Die politische Lage im Iran war auch immer sehr turbulent, schon vor der Revolution von 1979. Nach der Revolution, mit dem Beginn des Krieges und den Sanktionen ist die Inflation in den Himmel geschossen und die Wirtschaft ging den Bach runter. Ich habe immer viel gearbeitet, all meine Energie darin gesteckt, für meine Familie, meine Frau und Kinder zu sorgen. Doch es hat am Ende nicht gereicht. Ich habe gehofft, in Deutschland einen Job zu finden, womit ich ein besseres Leben für sie ermöglichen kann, aber das war viel schwieriger als gedacht."
-        },
-        "geometry": {
-          "coordinates": [
-            48.528583,
-            35.862200
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "H4",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Speyer",
-          "person": "Hadi",
-          "text": "Ich habe mich immer für Poesie interessiert, habe in meiner Freizeit auch selbst Gedichte geschrieben, auf Persisch natürlich. In einem anderen Leben wäre ich Dichter geworden, da bin ich mir sicher. Ich habe ein Talent für Sprachen; als ich nach Deutschland kam, konnte ich kein Wort Deutsch. Ich habe mir alles selbst beigebracht, mit Kassetten und Büchern, die ich in Secondhand-Läden gefunden habe. Genauso hatte ich in den 80ern auch Englisch gelernt. Da bin ich wirklich stolz drauf."
-        },
-        "geometry": {
-          "coordinates": [
-            8.45163597562822,
-            49.31574659224672
-          ],
-          "type": "Point"
-        }
-      },
-      {
-        "id": "H5",
-        "type": "Feature",
-        "properties": {        
-          "marker_location": "Gilan",
-          "person": "Hadi",
-          "text": "Ich habe mich in Deutschland nie zuhause gefühlt, war immer am Rennen.\nDie kleine Hoffnung, am Ende dieses Rennens wieder zuhause im Iran anzukommen, hat mir Kraft gespendet – eines Tages, wenn die Kinder alle erwachsen und selbstständig sind. Ich würde ein großes Haus oder mindestens eine Wohnung im Norden kaufen, wo die ganze Familie den Sommer verbringen, Ausflüge ans Meer und in den Wald machen kann. Wir würden jedes Wochenende auf der Terrasse Kabab grillen, für die Kinder gibt es natürlich Maiskolben, sie essen ja kein Fleisch. Meine Frau Simin würde das ganze Haus mit Pflanzen schmücken und Kräuter und Gemüse anbauen. Vielleicht können wir auch ein, zwei Hühner halten.\n\nDas sind aber wieder nur Träumereien, für ein Haus im Norden hätte ich vor Jahrzehnen anfangen müssen, Geld zurückzulegen."
-        },
-        "geometry": {
-          "coordinates": [
-            50.077732,
-            37.204926
-          ],
-          "type": "Point"
-        }
+      "geometry": {
+        "coordinates": [
+          6.9507913696124035,
+          50.96099513916005
+        ],
+        "type": "Point"
       }
-    ]
-  }
+    },
+    {
+      "id": "D2",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Teheran",
+        "person": "Darya",
+        "text": "Als ich jünger war, habe ich oft von einem fantastischen Land geträumt, der Verschmelzung von Iran und Deutschland. Als ich etwas älter wurde, habe ich davon fantasiert, wie ich in Deutschland eingestellt bin aber im Iran lebe, das Land entdecke und Abenteuer erlebe; das Leben in Deutschland hat sich temporär angefühlt, zweckgebunden.\n\nDas letzte Mal war ich vor fünf Jahren im Iran, seitdem ist sehr viel passiert. Ich weiß nicht, wann und wie ich Iran wieder besuchen werde. Ich weiß nur, dass die Distanz zwischen uns immer größer wurde. Und doch sehne ich mich oft zurück in die Nachbarschaft meiner Kindheit, nach den Straßenkatzen, den Bergen am Horizont, der Norouz-Stimmung und dem Essen. Und ich weiß, dass das Gefühl, wonach ich mich sehne, unerreichbar ist."
+      },
+      "geometry": {
+        "coordinates": [
+          51.41066016498163,
+          35.73629405409138
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "D3",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Köln",
+        "person": "Darya",
+        "text": "Ich kann nur eine Handvoll iranische Gerichte kochen. Das Winterfest feiere ich immer seltener und mein Haftsin sieht dürftig aus. Meine persische Handschrift ist miserabel und Hafis kann ich auch nur stockend vorlesen. Meine Sprachkenntnisse sind auf dem Niveau einer Teenagerin hängen geblieben und in iranischen Restaurants habe ich immer Angst, den Verhaltenskodex zu verletzen.\n\nIch habe mich echt bemüht: Bei jeder Reise in den Iran habe ich Bücher über die Geschichte des Landes mitgebracht, ich habe in meinem Auslandssemester Kurse über persische Literatur belegt und in meinem Studium Hausarbeiten über die Sprache und Kultur geschrieben. Habe Anschluss an die diasporische Community gesucht und an einem Kalligrafie-Kurs teilgenommen.\n\nDoch wie schafft man es, in einer neuen Welt anzukommen, ohne die alte ein Stück weit zu verlieren?"
+      },
+      "geometry": {
+        "coordinates": [
+          6.940482980228192,
+          50.93110424751466
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "D5",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Speyer",
+        "person": "Darya",
+        "text": "In den letzten Jahren war ich paarmal wieder in Speyer, um Schulfreund*innen zu besuchen. Schon bei der Ankunft am Bahnhof lief mir ein Schauer über den Rücken. Speyer war der Ort der nassen Kälte, der Ort, wo Träume zugrunde gehen. Als ich 2010 da ankam, kam mir die Welt noch verwirrender vor als davor schon. Jetzt habe ich Worte für das, was mir zuteilwurde: Rassismus, Klassismus, überforderte, depressive Eltern, problematisches Schulsystem, voreingenommene, ahnungslose Lehrer*innen, im Stich gelassene Schulkamerad*innen.\n\nDoch alles, was mein 12-jähriges Ich fühlte, waren Ablehnung, Orientierungslosigkeit, Fremdheit und wie sehr ich meine Familie, Freundinnen und Leben im Iran vermisse. Ich habe nicht verstanden, warum meine Eltern sich nicht für mich interessieren, warum meine Mitschüler*innen so gemein zu mir sind und warum die Lehrer*innen so wenig an mich glauben. Speyer war klein, kalt und grau und ich bin jeden Tag dankbar dafür, dass ich es rausgeschafft habe."
+      },
+      "geometry": {
+        "coordinates": [
+          8.43965634304505,
+          49.325062265539884
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "D6",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Qeschm",
+        "person": "Darya",
+        "text": "Qeschm. Insel der Fantasien, so trügerisch. Kennst du das, wenn du in deinem Herkunftsland Urlaub machst und dich fragst, warum ihr jemals weggezogen seid? Warum deine Eltern jemals diesen himmlischen Ort verlassen haben? Hier spürst du dich, hier fühlst du dich frei und lebendig. Es fühlt sich vertraut und trotzdem abenteuerlich an!\n\nUnd dann kehrt langsam wieder die Erinnerung ein. Du bist in die Rolle einer Touristin geschlüpft, hast das Privileg erworben, dich wie eine Touristin zu fühlen. Aber pass auf, wenn du zu lange hier verweilst, wenn sie dich erwischen, bist du wieder Darya Kazemi, Bürgerin der Islamischen Republik Iran."
+      },
+      "geometry": {
+        "coordinates": [
+          55.88219398139495,
+          26.6158725032075
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "D7",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Teheran",
+        "person": "Darya",
+        "text": "Manchmal fühlt es sich so an, als hätte mich jemand mit Gewalt aus der Erde rausgerissen und hektisch woanders eingepflanzt, ohne einen einzigen Gedanken an die hinterbliebenen Wurzeln zu verlieren."
+      },
+      "geometry": {
+        "coordinates": [
+          51.15562205845783,
+          35.409880175150874
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "A1",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Münster",
+        "person": "Azar",
+        "text": "Ich gucke nicht gerne in den Spiegel. Ich bin darin eh nicht mehr zu sehen. Von mir ist nicht viel übriggeblieben, nur eine verkrümmte Hülle. Es war nichts, wie ich es mir vor meiner Ankunft vorgestellt hatte. Von allem war nur eine leere Hülle da, meiner Familie, der Uni, der Freiheit. So habe ich mich auch in meine Hülle zurückgezogen; das war einfacher, als mir ihre ständigen Vorwürfe anzuhören, dass ich nichts aus mir mache. Haben sie selbst schon mal in den Spiegel geschaut?"
+      },
+      "geometry": {
+        "coordinates": [
+          7.57604542629943,
+          51.96801911756816
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "A2",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Münster",
+        "person": "Azar",
+        "text": "Darya hat immer weniger Zeit für mich, meistens ist sie mit ihrem Freund oder ihren Kommiliton*innen unterwegs. Als sie klein war und wir beide im Iran gelebt haben, waren wir richtig close.\n\nSie sagt mir immer, ich sollte raus in die Welt, mich mehr zeigen, trauen, neue Menschen kennenlernen. Für sie ist das natürlich leicht. Sie spricht perfekt Deutsch, versteht die Deutschen. Sie verstehen mich aber nicht. Und jetzt hat die Person, die mich am besten verstehen könnte, die meine Geschichte, unsere Familie kennt, keine Zeit mehr für mich."
+      },
+      "geometry": {
+        "coordinates": [
+          7.608550,
+          51.963718
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "A3",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Münster",
+        "person": "Azar",
+        "text": "Gestern habe ich Thu nach ihrem Urlaub in unserem Lieblingscafé getroffen. Sie hat mir von ihrer Familie erzählt, die sie in Vietnam besucht hat und ich habe ihr davon erzählt, wie schwierig es ist, einen Job zu finden, der zu meinem Abschluss passt. Ich kenne sie erst seit einem Jahr, aber ich habe das Gefühl, wir kennen uns schon ewig. Sie versteht mich, verurteilt mich nicht. Thu ist hier geboren, aber ich glaube, sie versteht trotzdem, wie es sich anfühlt, Ausländerin zu sein.\n\nSie hat mir ein Souvenir aus Vietnam mitgebracht. Ich hatte ihr vor paar Monaten auch Handwerk aus Schiras zum Geburtstag geschenkt. Wir sind beide große Fans von traditionellem Kunsthandwerk!"
+      },
+      "geometry": {
+        "coordinates": [
+          7.625738176074098,
+          51.946977651802605
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "A4",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Münster",
+        "person": "Azar",
+        "text": "Manchmal schäme ich mich für alles, was ich nicht hinbekomme. Wenn du im Iran lebst, denkst du, dass alles nach der Auswanderung besser wird – Musst du auch, denn sonst fehlt dir die Kraft, das ganze Prozedere für den Visumantrag durchzustehen. Viele sind neidisch auf dich, weil sie denken, dass dir mit dem Visum das Glück in den Schoß gefallen ist. Doch niemand spricht darüber, wie schwierig es ist, wenn du alles hinter dir lässt, was dich ausmacht – deine Freund*innen, deine Sprache, deine Kultur. Alle möchten von der tollen neuen Welt hören, von der Freiheit, dem Wohlstand. Und du schämst dich, denn du fühlst dich überhaupt nicht frei, sondern leer, ängstlich und verloren. Aber du traust dich auch nicht, dich zu beschweren; wie kann ich nur so undankbar sein? Ich habe das, wofür viele ihr Leben riskieren."
+      },
+      "geometry": {
+        "coordinates": [
+          7.627339172114905,
+          51.95476985994904
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "H1",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Speyer",
+        "person": "Hadi",
+        "text": "Es gibt dieses Lied von Kourosh Yaghmaei, „Eisblume“:\n\nچی بخونم جوونیم رفته صدام رفته دیگه\nگل یخ توی دلم جوونه کرده\n\n„Was soll ich singen? Meine Jugend ist dahin, meine Stimme längst verweht. In meinem Herzen blüht die Eisblume.”\n\nIch halte nicht so viel von ihm, er hat kein moralisches Leben geführt. Doch Talent hatte er auf jeden Fall."
+      },
+      "geometry": {
+        "coordinates": [
+          8.42253662958234,
+          49.323545225003755
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "H3",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Zandschan",
+        "person": "Hadi",
+        "text": "Es gab in meinem Leben nicht viel Stabilität und Ruhe. Meine Eltern sind in den 40ern, wie viele andere in der Zeit, von ihrem Dorf in Zandschan nach Teheran gezogen, um Arbeit zu finden. Sie waren beide Analphabeten und sprachen nur wenig Persisch. Als der zweitälteste Sohn musste ich natürlich als Jugendlicher schon anfangen zu arbeiten und Verantwortung für meine jüngeren Geschwister übernehmen. Da bleibt nicht viel Zeit übrig für Schule und andere Spielereien. Die politische Lage im Iran war auch immer sehr turbulent, schon vor der Revolution von 1979. Nach der Revolution, mit dem Beginn des Krieges und den Sanktionen ist die Inflation in den Himmel geschossen und die Wirtschaft ging den Bach runter. Ich habe immer viel gearbeitet, all meine Energie darin gesteckt, für meine Familie, meine Frau und Kinder zu sorgen. Doch es hat am Ende nicht gereicht. Ich habe gehofft, in Deutschland einen Job zu finden, womit ich ein besseres Leben für sie ermöglichen kann, aber das war viel schwieriger als gedacht."
+      },
+      "geometry": {
+        "coordinates": [
+          48.528583,
+          35.862200
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "H4",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Speyer",
+        "person": "Hadi",
+        "text": "Ich habe mich immer für Poesie interessiert, habe in meiner Freizeit auch selbst Gedichte geschrieben, auf Persisch natürlich. In einem anderen Leben wäre ich Dichter geworden, da bin ich mir sicher. Ich habe ein Talent für Sprachen; als ich nach Deutschland kam, konnte ich kein Wort Deutsch. Ich habe mir alles selbst beigebracht, mit Kassetten und Büchern, die ich in Secondhand-Läden gefunden habe. Genauso hatte ich in den 80ern auch Englisch gelernt. Da bin ich wirklich stolz drauf."
+      },
+      "geometry": {
+        "coordinates": [
+          8.45163597562822,
+          49.31574659224672
+        ],
+        "type": "Point"
+      }
+    },
+    {
+      "id": "H5",
+      "type": "Feature",
+      "properties": {
+        "marker_location": "Gilan",
+        "person": "Hadi",
+        "text": "Ich habe mich in Deutschland nie zuhause gefühlt, war immer am Rennen.\nDie kleine Hoffnung, am Ende dieses Rennens wieder zuhause im Iran anzukommen, hat mir Kraft gespendet – eines Tages, wenn die Kinder alle erwachsen und selbstständig sind. Ich würde ein großes Haus oder mindestens eine Wohnung im Norden kaufen, wo die ganze Familie den Sommer verbringen, Ausflüge ans Meer und in den Wald machen kann. Wir würden jedes Wochenende auf der Terrasse Kabab grillen, für die Kinder gibt es natürlich Maiskolben, sie essen ja kein Fleisch. Meine Frau Simin würde das ganze Haus mit Pflanzen schmücken und Kräuter und Gemüse anbauen. Vielleicht können wir auch ein, zwei Hühner halten.\n\nDas sind aber wieder nur Träumereien, für ein Haus im Norden hätte ich vor Jahrzehnen anfangen müssen, Geld zurückzulegen."
+      },
+      "geometry": {
+        "coordinates": [
+          50.077732,
+          37.204926
+        ],
+        "type": "Point"
+      }
+    }
+  ]
+}

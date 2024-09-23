@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useMap } from 'react-leaflet/hooks'
-import { Button, Card, Collapse} from 'react-bootstrap';
-import { MAPCENTER } from './Map';
+import { Button, Card, Collapse } from 'react-bootstrap';
+import { MapCenter } from './App';
 import bios from './../data/bios.json';
 import './css/ContentBox.css';
 
@@ -14,7 +14,7 @@ export default function ContentBox({ children, narrativeFragment, person, setFea
 
     function handleClose() {
         setFeatureFocus(false);
-        map.setView(MAPCENTER, 4.5);
+        map.setView(MapCenter, 4.5);
     }
 
     useEffect(() => {
@@ -24,42 +24,42 @@ export default function ContentBox({ children, narrativeFragment, person, setFea
     }, [person]);
 
     return (
-        <Card 
-            id="content-box">
+        <Card
+            id='content-box'>
             <Button
-                variant="link" 
-                id="close-contentbox" 
+                variant='link'
+                id='close-content-box'
                 onClick={handleClose}>
                 x
             </Button>
             <Card.Body
-                id="card-body">
-                <Card.Text 
-                    className="mb-4">
+                id='card-body'>
+                <Card.Text
+                    className='mb-4'>
                     {narrativeFragment}
                 </Card.Text>
                 {children}
-                <br/>
+                <br />
                 <p>
                     {bio.short_bio}
                 </p>
-                <Button 
-                    variant="link" 
-                    id="show-more-button" 
-                    onClick={() => setCollapseOpen(!collapseOpen)} 
-                    aria-controls="character-info" 
+                <Button
+                    variant='link'
+                    id='show-more-button'
+                    onClick={() => setCollapseOpen(!collapseOpen)}
+                    aria-controls='character-info'
                     aria-expanded={collapseOpen}>
-                    {collapseOpen ? "Weniger anzeigen" : "Mehr anzeigen"}
+                    {collapseOpen ? 'Weniger anzeigen' : 'Mehr anzeigen'}
                 </Button>
-                <Collapse 
-                    in={collapseOpen} 
-                    id="show-more-collapse">
-                    <div 
-                        id="long-bio">
+                <Collapse
+                    in={collapseOpen}
+                    id='show-more-collapse'>
+                    <div
+                        id='long-bio'>
                         {bio.long_bio}
                     </div>
                 </Collapse>
             </Card.Body>
-        </Card> 
+        </Card>
     );
 }
