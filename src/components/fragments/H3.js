@@ -32,6 +32,7 @@ export default function H3({ feature, setFeatureFocus }) {
      * Creates a visual effect that simulates an earth quake
      */
     useEffect(() => {
+        document.getElementById('close-content-box').classList.add('disabled');
         let interval1, interval2, interval3;
         setTimeout(() => {
             interval1 = setInterval(() => {
@@ -43,6 +44,7 @@ export default function H3({ feature, setFeatureFocus }) {
             interval3 = setInterval(() => {
                 map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
             }, 80);
+            document.getElementById('close-content-box').classList.remove('disabled');
         }, 3000);
         return () => {
             clearInterval(interval1);
