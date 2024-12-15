@@ -55,27 +55,28 @@ export default function ContentLayer() {
   };
 
   const nextFeature = () => {
-    if (!selectedFeatureIndex || isLastPart(features.features[selectedFeatureIndex])) return;
+    if (!selectedFeatureIndex || isLastPart(selectedFeature)) return;
     const feature = features.features[selectedFeatureIndex + 1];
     setSelectedFeatureIndex(selectedFeatureIndex + 1);
     setSelectedFeature(feature);
-    setCurrentCenter(feature.geometry.coordinates);
+    setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     setCurrentZoom(FEATURE_ZOOM);
   };
 
   const prevFeature = () => {
-    if (!selectedFeatureIndex || isFirstPart(features.features[selectedFeatureIndex])) return;
+    if (!selectedFeatureIndex || isFirstPart(selectedFeature)) return;
     const feature = features.features[selectedFeatureIndex - 1];
     setSelectedFeatureIndex(selectedFeatureIndex - 1);
     setSelectedFeature(feature);
-    setCurrentCenter(feature.geometry.coordinates);
+    setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     setCurrentZoom(FEATURE_ZOOM);
   };
 
   const attachEventListener = (feature, layer) => {
     layer.on('click', () => {
+      setSelectedFeatureIndex(features.features.indexOf(feature));
       setSelectedFeature(feature);
-      setCurrentCenter(feature.geometry.coordinates);
+      setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
       setCurrentZoom(FEATURE_ZOOM);
     });
   };
@@ -106,7 +107,7 @@ export default function ContentLayer() {
             selectedFeature={selectedFeature}
           >
             <div className="d-flex justify-content-between">
-              { isFirstPart(selectedFeature)
+              {!isFirstPart(selectedFeature)
               && (
               <button className="icon-button" aria-label="zurück" type="button" onClick={prevFeature}>
                 <img src={leftArrow} alt="" className="arrow-icon" />
