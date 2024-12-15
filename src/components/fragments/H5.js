@@ -1,62 +1,72 @@
 import { useEffect } from 'react';
 import Image from 'react-bootstrap/Image';
-import ContentBox from './../ContentBox';
-import natureSound from './../../data/H5/nature.mp3';
-import image from './../../data/H5/gilan_house.JPG';
+import ContentBox from '../ContentBox';
+import natureSound from '../../data/H5/nature.mp3';
+import image from '../../data/H5/gilan_house.JPG';
 import './css/H5.css';
 
 /**
  * Component displaying the text, location description, image, and character bio and playing the audio related to the narrative fragment H5
- * 
- * @param {object} props 
+ *
+ * @param {object} props
  * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
 export default function H5({ feature, setFeatureFocus }) {
-
-    /**
+  /**
      * Attribution text for the image
      */
-    const soundAttribution = '100% Nature (Brook Sounds and Birds).mp3 by Sonoquilibrium – https://freesound.org/s/514750/ – License: Attribution NonCommercial 3.0';
-    /**
+  const soundAttribution = '100% Nature (Brook Sounds and Birds).mp3 by Sonoquilibrium – https://freesound.org/s/514750/ – License: Attribution NonCommercial 3.0';
+  /**
      * Attribution text for the sound
      */
-    const imageAttribution = 'Irangilaneh, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons';
+  const imageAttribution = 'Irangilaneh, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons';
 
-    /**
+  /**
      * Plays the audio on repeat and pauses it when the content box is closed
      */
-    useEffect(() => {
-        const rainAudio = new Audio(natureSound);
-        rainAudio.play();
-        rainAudio.loop = true;
-        return () => rainAudio.pause();
-    });
+  useEffect(() => {
+    const rainAudio = new Audio(natureSound);
+    rainAudio.play();
+    rainAudio.loop = true;
+    return () => rainAudio.pause();
+  });
 
-    return (
-        <div>
-            <ContentBox
-                narrativeFragment={feature.properties.text}
-                person={feature.properties.person}
-                setFeatureFocus={setFeatureFocus}>
-                <p
-                    style={{ color: 'var(--primary)', fontSize: '8pt', marginTop: '-10px' }}>
-                    Auf der Karte ist der Ort markiert, wo Hadis Haus in Gilan stehen könnte.<br />
-                </p>
-                <div
-                    className='d-flex justify-content-center'>
-                    <Image
-                        id='h5-image'
-                        src={image}
-                        rounded />
-                </div>
-                <p
-                    id='attribution'>
-                    Foto: {imageAttribution}<br />
-                    Audio: {soundAttribution}
-                </p>
-            </ContentBox>
+  return (
+    <div>
+      <ContentBox
+        narrativeFragment={feature.properties.text}
+        person={feature.properties.person}
+        setFeatureFocus={setFeatureFocus}
+      >
+        <p
+          style={{ color: 'var(--primary)', fontSize: '8pt', marginTop: '-10px' }}
+        >
+          Auf der Karte ist der Ort markiert, wo Hadis Haus in Gilan stehen könnte.
+          <br />
+        </p>
+        <div
+          className="d-flex justify-content-center"
+        >
+          <Image
+            id="h5-image"
+            src={image}
+            rounded
+          />
         </div>
-    );
+        <p
+          id="attribution"
+        >
+          Foto:
+          {' '}
+          {imageAttribution}
+          <br />
+          Audio:
+          {' '}
+          {soundAttribution}
+        </p>
+      </ContentBox>
+    </div>
+  );
 }
