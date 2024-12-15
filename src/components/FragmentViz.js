@@ -20,10 +20,11 @@ import D7 from './fragments/D7';
  *
  * @param {object} props
  * @param {GeoJSON.Feature} props.selectedFeature The geo-object that was clicked on by the user
+ * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
 export default function FragmentViz({
-  selectedFeature, children,
+  selectedFeature, setFeatureFocus, children,
 }) {
   /**
      * Coordinates of the geo-object
@@ -61,35 +62,83 @@ export default function FragmentViz({
               </A1>
             );
           case 'A2':
-            return <A2 feature={selectedFeature} />;
+            return (
+              <A2 feature={selectedFeature}>
+                {children}
+              </A2>
+            );
           case 'A3':
-            return <A3 feature={selectedFeature} />;
+            return (
+              <A3 feature={selectedFeature}>
+                {children}
+              </A3>
+            );
           case 'A4':
-            return <A4 feature={selectedFeature} />;
+            return (
+              <A4 feature={selectedFeature}>
+                {children}
+              </A4>
+            );
           case 'D1':
-            return <D1 feature={selectedFeature} />;
+            return (
+              <D1 feature={selectedFeature}>
+                {children}
+              </D1>
+            );
           case 'D2':
-            return <D2 feature={selectedFeature} />;
+            return (
+              <D2 feature={selectedFeature}>
+                {children}
+              </D2>
+            );
           case 'D3':
-            return <D3 feature={selectedFeature} />;
+            return (
+              <D3 feature={selectedFeature}>
+                {children}
+              </D3>
+            );
           case 'D5':
-            return <D5 feature={selectedFeature} />;
+            return (
+              <D5 feature={selectedFeature}>
+                {children}
+              </D5>
+            );
           case 'D6':
-            return <D6 feature={selectedFeature} />;
+            return (
+              <D6 feature={selectedFeature}>
+                {children}
+              </D6>
+            );
           case 'D7':
-            return <D7 feature={selectedFeature} />;
+            return (
+              <D7 feature={selectedFeature}>
+                {children}
+              </D7>
+            );
           case 'H1':
-            return <H1 feature={selectedFeature} />;
+            return (
+              <H1 feature={selectedFeature}>
+                {children}
+              </H1>
+            );
           case 'H3':
             return (
-              <H3 feature={selectedFeature}>
+              <H3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}>
                 {children}
               </H3>
             );
           case 'H4':
-            return <H4 feature={selectedFeature} />;
+            return (
+              <H4 feature={selectedFeature}>
+                {children}
+              </H4>
+            );
           case 'H5':
-            return <H5 feature={selectedFeature} />;
+            return (
+              <H5 feature={selectedFeature}>
+                {children}
+              </H5>
+            );
           default:
             return null;
         }

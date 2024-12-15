@@ -8,7 +8,7 @@ import ContentBox from '../ContentBox';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function A1({ feature, setFeatureFocus }) {
+export default function A1({ feature, setFeatureFocus, children }) {
   return (
     <div>
       <ContentBox
@@ -22,6 +22,7 @@ export default function A1({ feature, setFeatureFocus }) {
           Auf der Karte ist Azars Wohnung in Münster markiert.
           <br />
         </span>
+        {children}
       </ContentBox>
     </div>
   );

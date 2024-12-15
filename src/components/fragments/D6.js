@@ -12,7 +12,7 @@ import './css/D6.css';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function D6({ feature, setFeatureFocus }) {
+export default function D6({ feature, setFeatureFocus, children }) {
   /**
      * Plays the audios on repeat and pauses them when the content box is closed
      */
@@ -48,6 +48,7 @@ export default function D6({ feature, setFeatureFocus }) {
           <br />
           <br />
         </span>
+        {children}
       </ContentBox>
     </div>
   );

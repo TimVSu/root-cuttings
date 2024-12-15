@@ -11,7 +11,7 @@ import souvenirVietnam from '../../data/A3/souvenir_vietnam.jpg';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function A3({ feature, setFeatureFocus }) {
+export default function A3({ feature, setFeatureFocus, children }) {
   /**
      * Attribution text for the first image of the slide show
      */
@@ -42,6 +42,7 @@ export default function A3({ feature, setFeatureFocus }) {
           {imageAttribution}
         </p>
       </ContentBox>
+      {children}
     </div>
   );
 }

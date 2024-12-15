@@ -19,7 +19,7 @@ import img8 from '../../data/D1/photos/8_older.png';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function D1({ feature, setFeatureFocus }) {
+export default function D1({ feature, setFeatureFocus, children }) {
   /**
      * The images to be displayed in the slide show
      */
@@ -53,6 +53,7 @@ export default function D1({ feature, setFeatureFocus }) {
         <ImageCarousel
           images={images}
         />
+        {children}
       </ContentBox>
     </div>
   );
