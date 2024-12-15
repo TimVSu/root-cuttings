@@ -15,7 +15,7 @@ import './css/D7.css';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function D7({ feature, setFeatureFocus }) {
+export default function D7({ feature, setFeatureFocus, children }) {
   /**
      * State storing a boolean value indicating whether the input prompt is shown
      */
@@ -80,6 +80,7 @@ export default function D7({ feature, setFeatureFocus }) {
           Auf der Karte ist der Imam Khomeini-Flughafen in Teheran markiert.
           <br />
         </span>
+        {children}
       </ContentBox>
 
       <Modal

@@ -12,7 +12,7 @@ import './css/D3.css';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function D3({ feature, setFeatureFocus }) {
+export default function D3({ feature, setFeatureFocus, children }) {
   /**
      * Function that defines how the point geo-objects should be displayed on the map
      *
@@ -48,6 +48,7 @@ export default function D3({ feature, setFeatureFocus }) {
         >
           Auf der Karte sind Daryas Lieblingsorte und -veranstaltungen aus der iranischen Diaspora in Köln markiert.
         </p>
+        {children}
       </ContentBox>
       <GeoJSON
         data={locations}

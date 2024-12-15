@@ -10,7 +10,7 @@ import ContentBox from '../ContentBox';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function A2({ feature, setFeatureFocus }) {
+export default function A2({ feature, setFeatureFocus, children }) {
   /**
      * Icon for the marker respresenting Darya's house on the map
      */
@@ -46,7 +46,7 @@ export default function A2({ feature, setFeatureFocus }) {
         icon={icon}
         interactive={false}
       />
-
+      {children}
     </div>
   );
 }

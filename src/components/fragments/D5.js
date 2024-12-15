@@ -11,7 +11,7 @@ import './css/D5.css';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function D5({ feature, setFeatureFocus }) {
+export default function D5({ feature, setFeatureFocus, children }) {
   /**
      * Attribution text for the audio
      */
@@ -51,6 +51,7 @@ export default function D5({ feature, setFeatureFocus }) {
           {' '}
           {soundAttribution}
         </p>
+        {children}
       </ContentBox>
     </div>
   );

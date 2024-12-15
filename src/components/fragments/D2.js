@@ -20,7 +20,7 @@ import './css/D2.css';
  * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
  * @returns {React.JSX.Element}
  */
-export default function D2({ feature, setFeatureFocus }) {
+export default function D2({ feature, setFeatureFocus, children }) {
   /**
      * The Leaflet map object
      */
@@ -64,6 +64,7 @@ export default function D2({ feature, setFeatureFocus }) {
         <ImageCarousel
           images={images}
         />
+        {children}
       </ContentBox>
       <ImageOverlay
         url={dtl}
