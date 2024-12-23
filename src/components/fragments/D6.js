@@ -29,7 +29,7 @@ export default function D6({ feature, setFeatureFocus, children }) {
       birdsAudio.pause();
       azanAudio.pause();
     };
-  });
+  }, []);
 
   return (
     <div>

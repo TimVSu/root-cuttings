@@ -32,8 +32,8 @@ export default function D3({ feature, setFeatureFocus, children }) {
   /**
      * Binds a tooltip to each marker containing the name of the location
      */
-  const onEachFeature = (layer) => {
-    layer.bindTooltip(feature.properties.name, { permanent: true, direction: 'center', className: 'diaspora-label' });
+  const onEachFeature = () => {
+    // layer.bindTooltip(feature.properties.name, { permanent: true, direction: 'center', className: 'diaspora-label' });
   };
 
   return (

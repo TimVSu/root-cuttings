@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { useMap } from 'react-leaflet';
+// import { useEffect } from 'react';
+// import { useMap } from 'react-leaflet';
 import { Image } from 'react-bootstrap';
 import ContentBox from '../ContentBox';
 import image from '../../data/H3/working.png';
@@ -17,20 +17,20 @@ export default function H3({ feature, setFeatureFocus, children }) {
   /**
      * The Leaflet map object
      */
-  const map = useMap();
+  // const map = useMap();
   /**
      * Coordinates of the selected geo-object
      */
-  const coords = feature.geometry.coordinates;
+  // const coords = feature.geometry.coordinates;
   /**
      * Modified coordinates to fit the layout with the content box
      */
-  const modifiedCoords = [coords[0] - 0.023, coords[1]];
+  // const modifiedCoords = [coords[0] - 0.023, coords[1]];
 
   /**
      * Creates a visual effect that simulates an earth quake
      */
-  useEffect(() => {
+  /* useEffect(() => {
     document.getElementById('close-content-box').classList.add('disabled');
     let interval1; let interval2; let
       interval3;
@@ -51,7 +51,7 @@ export default function H3({ feature, setFeatureFocus, children }) {
       clearInterval(interval2);
       clearInterval(interval3);
     };
-  });
+  }); */
 
   return (
     <div>
