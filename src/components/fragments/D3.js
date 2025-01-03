@@ -30,11 +30,27 @@ export default function D3({ feature, setFeatureFocus, children }) {
   };
 
   /**
+   * Binds a tooltip to each marker containing the name of the location
+   *
+   * @param {GeoJSON.Feature} feature The GeoJSON feature being iterated
+   * @param {L.Layer} layer The corresponding Leaflet layer
+   */
+  const onEachFeature = (geofeature, layer) => {
+    if (geofeature.properties && geofeature.properties.name) {
+      layer.bindTooltip(geofeature.properties.name, {
+        permanent: true,
+        direction: 'center',
+        className: 'diaspora-label',
+      });
+    }
+  };
+  /**
      * Binds a tooltip to each marker containing the name of the location
      */
-  const onEachFeature = (layer) => {
+  /** const onEachFeature = (layer) => {
     layer.bindTooltip(feature.properties.name, { permanent: true, direction: 'center', className: 'diaspora-label' });
   };
+  */
 
   return (
     <div>
