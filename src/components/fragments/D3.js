@@ -44,21 +44,17 @@ export default function D3({ feature, setFeatureFocus, children }) {
       });
     }
   };
-  /**
-     * Binds a tooltip to each marker containing the name of the location
-     */
-  /** const onEachFeature = (layer) => {
-    layer.bindTooltip(feature.properties.name, { permanent: true, direction: 'center', className: 'diaspora-label' });
-  };
-  */
 
   return (
     <div>
       <ContentBox
-        narrativeFragment={feature.properties.text}
         person={feature.properties.person}
         setFeatureFocus={setFeatureFocus}
       >
+        <div
+          className="narrative-fragment-text"
+          dangerouslySetInnerHTML={{ __html: feature.properties.text }}
+        />
         <p
           style={{ color: 'var(--primary)', fontSize: '8pt' }}
         >

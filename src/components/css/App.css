@@ -46,49 +46,57 @@
 .icon-button:active .arrow-icon {
     opacity: 0.5;
 }
-
+  
 .hoverable-word {
-    position: relative;
-    z-index: 1002;
-    transition: color 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .hoverable-word:hover {
-    color: white;
-    background-color: var(--primary);
-    border-radius: 4px;
-  }
+  position: relative;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-decoration: underline dotted;
+  z-index: 1;
+}
 
-  .hoverable-word::after {
-    content: attr(data-tooltip); /* Tooltip-Text aus dem Attribut */
-    position: absolute;
-    bottom: 125%; /* Position über dem Wort */
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--tooltip-bg, black); /* Standard: schwarz */
-    color: white;
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-size: 10pt;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease, visibility 0.2s ease;
-  }
-  
-  .hoverable-word:hover::after {
-    opacity: 1;
-    visibility: visible;
-  }
+.hoverable-word:hover {
+  color: black;
+  background-color: #ffc14e;
+  border-radius: 4px;
+}
 
-  .narrative-fragment-text {
-    position: relative;
-    z-index: 1001;
-    pointer-events: auto;
-  }
+.hoverable-word::after {
+  content: attr(data-tooltip); 
+  position: absolute;
+  top: 125%; 
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 250px;
+  background-color: var(--tooltip-bg, rgb(255, 255, 255));
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 2px solid #000;
+  font-size: 10pt;
+  white-space: normal;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, visibility 0.2s ease;
+  z-index: 1002;
+  overflow-y: auto;
+}
+
+.hoverable-word:hover::after {
+  opacity: 1;
+  visibility: visible;
+  left: auto;
+}
+
+/* so that the dottet word is not visible when tooltip is activated */
+.hoverable-word:hover {
+  z-index: 1003; 
+}
+
+.narrative-fragment-text {  
+  position: relative;
+  z-index: 1001; 
+  pointer-events: auto;
+}
   
-  .leaflet-container {
-    z-index: 0 !important; /* Karte soll unter der Info-Box bleiben */
-  }
   

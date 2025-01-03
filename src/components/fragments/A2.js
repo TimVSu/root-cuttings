@@ -23,7 +23,6 @@ export default function A2({ feature, setFeatureFocus, children }) {
   return (
     <div>
       <ContentBox
-        // narrativeFragment={feature.properties.text}
         person={feature.properties.person}
         setFeatureFocus={setFeatureFocus}
       >
