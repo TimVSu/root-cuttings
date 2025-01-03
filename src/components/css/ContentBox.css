@@ -1,6 +1,6 @@
 #content-box {
     margin: 10px;
-    z-index: 400;
+    z-index: 1000;
     width: 40rem;
     color: var(--text);
     font-size: 9pt;
@@ -9,6 +9,8 @@
     border-color: var(--accent);
     border-width: 2px;
     white-space: pre-wrap;
+    pointer-events: auto;
+    overflow: visible;
 }
 
 #card-body {

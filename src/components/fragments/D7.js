@@ -79,6 +79,12 @@ export default function D7({ feature, setFeatureFocus, children }) {
         >
           Auf der Karte ist der Imam Khomeini-Flughafen in Teheran markiert.
           <br />
+          <span
+            className="tooltip"
+            data-tooltip="Der Imam Khomeini-Flughafen ist der wichtigste internationale Flughafen des Iran."
+          >
+            Mehr dazu
+          </span>
         </span>
         {children}
       </ContentBox>

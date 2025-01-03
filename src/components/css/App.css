@@ -46,3 +46,49 @@
 .icon-button:active .arrow-icon {
     opacity: 0.5;
 }
+
+.hoverable-word {
+    position: relative;
+    z-index: 1002;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  .hoverable-word:hover {
+    color: white;
+    background-color: var(--primary);
+    border-radius: 4px;
+  }
+
+  .hoverable-word::after {
+    content: attr(data-tooltip); /* Tooltip-Text aus dem Attribut */
+    position: absolute;
+    bottom: 125%; /* Position über dem Wort */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--tooltip-bg, black); /* Standard: schwarz */
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 10pt;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+  }
+  
+  .hoverable-word:hover::after {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .narrative-fragment-text {
+    position: relative;
+    z-index: 1001;
+    pointer-events: auto;
+  }
+  
+  .leaflet-container {
+    z-index: 0 !important; /* Karte soll unter der Info-Box bleiben */
+  }
+  

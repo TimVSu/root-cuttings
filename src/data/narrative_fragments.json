@@ -23,7 +23,7 @@
       "properties": {
         "marker_location": "Teheran",
         "person": "Darya",
-        "text": "Als ich jünger war, habe ich oft von einem fantastischen Land geträumt, der Verschmelzung von Iran und Deutschland. Als ich etwas älter wurde, habe ich davon fantasiert, wie ich in Deutschland eingestellt bin aber im Iran lebe, das Land entdecke und Abenteuer erlebe; das Leben in Deutschland hat sich temporär angefühlt, zweckgebunden.\n\nDas letzte Mal war ich vor fünf Jahren im Iran, seitdem ist sehr viel passiert. Ich weiß nicht, wann und wie ich Iran wieder besuchen werde. Ich weiß nur, dass die Distanz zwischen uns immer größer wurde. Und doch sehne ich mich oft zurück in die Nachbarschaft meiner Kindheit, nach den Straßenkatzen, den Bergen am Horizont, der Norouz-Stimmung und dem Essen. Und ich weiß, dass das Gefühl, wonach ich mich sehne, unerreichbar ist."
+        "text": "Als ich jünger war, habe ich oft von einem fantastischen Land geträumt, der Verschmelzung von Iran und Deutschland. Als ich etwas älter wurde, habe ich davon fantasiert, wie ich in Deutschland eingestellt bin aber im Iran lebe, das Land entdecke und Abenteuer erlebe; das Leben in Deutschland hat sich temporär angefühlt, zweckgebunden.\n\nDas letzte Mal war ich vor fünf Jahren im Iran, seitdem ist sehr viel passiert. Ich weiß nicht, wann und wie ich Iran wieder besuchen werde. Ich weiß nur, dass die Distanz zwischen uns immer größer wurde. Und doch sehne ich mich oft zurück in die Nachbarschaft meiner Kindheit, nach den Straßenkatzen, den Bergen am Horizont, der <span class='hoverable-word' data-tooltip='Norouz ist das persische Neujahrsfest und markiert den Frühlingsanfang.'>Norouz</span>-Stimmung und dem Essen. Und ich weiß, dass das Gefühl, wonach ich mich sehne, unerreichbar ist."
       },
       "geometry": {
         "coordinates": [
@@ -103,7 +103,7 @@
       "properties": {
         "marker_location": "Münster",
         "person": "Azar",
-        "text": "Ich gucke nicht gerne in den Spiegel. Ich bin darin eh nicht mehr zu sehen. Von mir ist nicht viel übriggeblieben, nur eine verkrümmte Hülle. Es war nichts, wie ich es mir vor meiner Ankunft vorgestellt hatte. Von allem war nur eine leere Hülle da, meiner Familie, der Uni, der Freiheit. So habe ich mich auch in meine Hülle zurückgezogen; das war einfacher, als mir ihre ständigen Vorwürfe anzuhören, dass ich nichts aus mir mache. Haben sie selbst schon mal in den Spiegel geschaut?"
+        "text": "Ich gucke nicht gerne in den <span class='hoverable-word' data-tooltip='Ein Spiegel zeigt das eigene Abbild.'>Spiegel</span>. Ich bin darin eh nicht mehr zu sehen. Von mir ist nicht viel übriggeblieben, nur eine verkrümmte Hülle. Es war nichts, wie ich es mir vor meiner Ankunft vorgestellt hatte. Von allem war nur eine leere Hülle da, meiner Familie, der Uni, der Freiheit. So habe ich mich auch in meine Hülle zurückgezogen; das war einfacher, als mir ihre ständigen Vorwürfe anzuhören, dass ich nichts aus mir mache. Haben sie selbst schon mal in den Spiegel geschaut?"
       },
       "geometry": {
         "coordinates": [
@@ -119,7 +119,7 @@
       "properties": {
         "marker_location": "Münster",
         "person": "Azar",
-        "text": "Darya hat immer weniger Zeit für mich, meistens ist sie mit ihrem Freund oder ihren Kommiliton*innen unterwegs. Als sie klein war und wir beide im Iran gelebt haben, waren wir richtig close.\n\nSie sagt mir immer, ich sollte raus in die Welt, mich mehr zeigen, trauen, neue Menschen kennenlernen. Für sie ist das natürlich leicht. Sie spricht perfekt Deutsch, versteht die Deutschen. Sie verstehen mich aber nicht. Und jetzt hat die Person, die mich am besten verstehen könnte, die meine Geschichte, unsere Familie kennt, keine Zeit mehr für mich."
+        "text": "Darya hat immer <span class='hoverable-word' data-tooltip='Ein Spiegel zeigt das eigene Abbild.'>Spiegel</span> weniger Zeit für mich, meistens ist sie mit ihrem Freund oder ihren Kommiliton*innen unterwegs. Als sie klein war und wir beide im Iran gelebt haben, waren wir richtig close.\n\nSie sagt mir immer, ich sollte raus in die Welt, mich mehr zeigen, trauen, neue Menschen kennenlernen. Für sie ist das natürlich leicht. Sie spricht perfekt Deutsch, versteht die Deutschen. Sie verstehen mich aber nicht. Und jetzt hat die Person, die mich am besten verstehen könnte, die meine Geschichte, unsere Familie kennt, keine Zeit mehr für mich."
       },
       "geometry": {
         "coordinates": [

@@ -50,10 +50,18 @@ export default function ContentBox({
       <Card.Body
         id="card-body"
       >
-        <Card.Text
-          className="mb-4"
-        >
-          {narrativeFragment}
+        <Card.Text className="mb-4">
+          {Array.isArray(narrativeFragment)
+            ? narrativeFragment.map((segment) => (
+              <span
+                key={segment.id}
+                title={segment.hover || ''}
+                style={segment.hover ? { textDecoration: 'underline', cursor: 'help' } : {}}
+              >
+                {segment.content}
+              </span>
+            ))
+            : narrativeFragment}
         </Card.Text>
         {children}
         <br />
