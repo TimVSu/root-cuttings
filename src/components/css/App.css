@@ -36,12 +36,6 @@
     z-index: 600;
 }
 
-/* Animation für den Seitenumblätter-Effekt */
-.icon-button.flipped {
-  transform: rotateY(180deg); /* Hier wird der Flip-Effekt angewendet */
-  transition: transform 1s ease;
-}
-
 .arrow-icon {
     width: 30px;
     height: 30px;
