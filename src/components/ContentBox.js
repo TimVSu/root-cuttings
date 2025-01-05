@@ -50,7 +50,7 @@ export default function ContentBox({
       <Card.Body
         id="card-body"
       >
-        <Card.Text className="mb-4">
+        <Card.Text className="m-4 narrative-fragment-text">
           {Array.isArray(narrativeFragment)
             ? narrativeFragment.map((segment) => (
               <span
