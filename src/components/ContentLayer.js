@@ -3,6 +3,8 @@ import { GeoJSON, useMap } from 'react-leaflet';
 import {
   useEffect, useState, createContext, useContext, useMemo,
 } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import HTMLFlipBook from 'react-pageflip';
 import features from '../data/narrative_fragments.json';
 import PlaceList from './PlaceList';
 import InfoToast from './InfoToast';
@@ -25,8 +27,8 @@ export const useContentContext = () => useContext(ContentContext);
 
 export default function ContentLayer() {
   const map = useMap();
-  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState(null);
-  const [selectedFeature, setSelectedFeature] = useState(null);
+  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState(0);
+  const [selectedFeature, setSelectedFeature] = useState(features.features[0]);
   const [currentCenter, setCurrentCenter] = useState(MAP_CENTER);
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
   const [isInFlight, setIsInFlight] = useState(false);
@@ -76,10 +78,10 @@ export default function ContentLayer() {
 
   const attachEventListener = (feature, layer) => {
     layer.on('click', () => {
-      setSelectedFeatureIndex(features.features.indexOf(feature));
+      // setSelectedFeatureIndex(features.features.indexOf(feature));
       setSelectedFeature(feature);
-      setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-      setCurrentZoom(FEATURE_ZOOM);
+      // setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+      // setCurrentZoom(FEATURE_ZOOM);
     });
   };
 
@@ -131,7 +133,17 @@ export default function ContentLayer() {
   }), [selectedFeature, selectedFeatureIndex, currentCenter, currentZoom]);
 
   return (
+    // eslint-disable-next-line react/jsx-no-comment-textnodes
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <ContentContext.Provider value={contextValues}>
+      <div className="flipbook-wrapper">
+        <HTMLFlipBook width={300} height={424} startZIndex={450} className="flipbook">
+          <div className="demoPage">Page 1</div>
+          <div className="demoPage">Page 2</div>
+          <div className="demoPage">Page 3</div>
+          <div className="demoPage">Page 4</div>
+        </HTMLFlipBook>
+      </div>
       {selectedFeature
         ? (
           <FragmentViz

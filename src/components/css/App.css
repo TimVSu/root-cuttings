@@ -52,19 +52,18 @@
 }
 
 .demoPage {
-    width: 100%; /* Ensures it fits within the flipbook container */
-    height: 100%; /* Full height of the flipbook */
-    display: flex; /* Center content */
+    width: 200; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500; 
+    display: block;
     align-items: center;
     justify-content: center;
     font-family: 'Arial', sans-serif; /* Clean and readable font */
     font-size: 24px; /* Adjust as needed */
     color: #333; /* Dark text color */
     background-color: #f9f9f9; /* Light background for contrast */
-    border: 1px solid #ddd; /* Subtle border to define the page */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds slight depth */
-    margin: 0; /* No margin to fit exactly in the flipbook */
-    overflow: hidden; /* Prevents overflow issues */
     user-select: none; /* Prevents text selection */
   }
 
@@ -72,3 +71,10 @@
     z-index: 450;
   }
   
+  .flipbook-wrapper {
+    width: 300px;
+    height: 424px;
+    overflow: hidden; /* Prevent multi-page rendering */
+    display: block;   /* Ensure inline elements behave like block */
+    z-index: 470;
+  }
