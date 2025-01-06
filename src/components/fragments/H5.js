@@ -37,10 +37,13 @@ export default function H5({ feature, setFeatureFocus, children }) {
   return (
     <div>
       <ContentBox
-        narrativeFragment={feature.properties.text}
         person={feature.properties.person}
         setFeatureFocus={setFeatureFocus}
       >
+        <div
+          className="narrative-fragment-text"
+          dangerouslySetInnerHTML={{ __html: feature.properties.text }}
+        />
         <p
           style={{ color: 'var(--primary)', fontSize: '8pt', marginTop: '-10px' }}
         >

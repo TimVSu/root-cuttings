@@ -4,7 +4,6 @@ import {
   useEffect, useState, createContext, useContext, useMemo,
 } from 'react';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import HTMLFlipBook from 'react-pageflip';
 import features from '../data/narrative_fragments.json';
 import PlaceList from './PlaceList';
 import InfoToast from './InfoToast';
@@ -136,14 +135,6 @@ export default function ContentLayer() {
     // eslint-disable-next-line react/jsx-no-comment-textnodes
     // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <ContentContext.Provider value={contextValues}>
-      <div className="flipbook-wrapper">
-        <HTMLFlipBook width={300} height={424} startZIndex={450} className="flipbook">
-          <div className="demoPage">Page 1</div>
-          <div className="demoPage">Page 2</div>
-          <div className="demoPage">Page 3</div>
-          <div className="demoPage">Page 4</div>
-        </HTMLFlipBook>
-      </div>
       {selectedFeature
         ? (
           <FragmentViz
