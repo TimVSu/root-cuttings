@@ -33,10 +33,13 @@ export default function D5({ feature, setFeatureFocus, children }) {
         id="gloomy-overlay"
       />
       <ContentBox
-        narrativeFragment={feature.properties.text}
         person={feature.properties.person}
         setFeatureFocus={setFeatureFocus}
       >
+        <div
+          className="narrative-fragment-text"
+          dangerouslySetInnerHTML={{ __html: feature.properties.text }}
+        />
         <span
           style={{ color: 'var(--primary)', fontSize: '8pt' }}
         >

@@ -29,7 +29,7 @@ export default function D6({ feature, setFeatureFocus, children }) {
       birdsAudio.pause();
       azanAudio.pause();
     };
-  });
+  }, []);
 
   return (
     <div>
@@ -37,10 +37,13 @@ export default function D6({ feature, setFeatureFocus, children }) {
         id="sunny-overlay"
       />
       <ContentBox
-        narrativeFragment={feature.properties.text}
         person={feature.properties.person}
         setFeatureFocus={setFeatureFocus}
       >
+        <div
+          className="narrative-fragment-text"
+          dangerouslySetInnerHTML={{ __html: feature.properties.text }}
+        />
         <span
           style={{ color: 'var(--primary)', fontSize: '8pt' }}
         >

@@ -1,5 +1,7 @@
 import L from 'leaflet';
 import { Marker } from 'react-leaflet';
+import BookWrapper from './books/BookWrapper';
+import features from '../data/narrative_fragments.json';
 import A1 from './fragments/A1';
 import A2 from './fragments/A2';
 import A3 from './fragments/A3';
@@ -9,11 +11,11 @@ import D2 from './fragments/D2';
 import D3 from './fragments/D3';
 import D5 from './fragments/D5';
 import D6 from './fragments/D6';
+import D7 from './fragments/D7';
 import H1 from './fragments/H1';
 import H3 from './fragments/H3';
 import H4 from './fragments/H4';
 import H5 from './fragments/H5';
-import D7 from './fragments/D7';
 
 /**
  * Component displaying the narrative fragment, media, and visualizations of the selected geo-object
@@ -24,7 +26,7 @@ import D7 from './fragments/D7';
  * @returns {React.JSX.Element}
  */
 export default function FragmentViz({
-  selectedFeature, setFeatureFocus, children,
+  selectedFeature, updatePage,
 }) {
   /**
      * Coordinates of the geo-object
@@ -54,90 +56,35 @@ export default function FragmentViz({
         interactive={false}
       />
       {(() => {
-        switch (selectedFeature.id) {
-          case 'A1':
+        switch (selectedFeature.id[0]) {
+          case 'A':
             return (
-              <A1 feature={selectedFeature}>
-                {children}
-              </A1>
+              <BookWrapper startPage={selectedFeature.id[1]} updatePage={updatePage}>
+                <div><A1 feature={features.features[6]} /></div>
+                <div><A2 feature={features.features[7]} /></div>
+                <div><A3 feature={features.features[8]} /></div>
+                <div><A4 feature={features.features[9]} /></div>
+              </BookWrapper>
             );
-          case 'A2':
+          case 'D':
             return (
-              <A2 feature={selectedFeature}>
-                {children}
-              </A2>
+              <BookWrapper startPage={selectedFeature.id[1]} updatePage={updatePage}>
+                <div><D1 feature={features.features[0]} /></div>
+                <div><D2 feature={features.features[1]} /></div>
+                <div><D3 feature={features.features[2]} /></div>
+                <div><D5 feature={features.features[3]} /></div>
+                <div><D6 feature={features.features[4]} /></div>
+                <div><D7 feature={features.features[5]} /></div>
+              </BookWrapper>
             );
-          case 'A3':
+          case 'H':
             return (
-              <A3 feature={selectedFeature}>
-                {children}
-              </A3>
-            );
-          case 'A4':
-            return (
-              <A4 feature={selectedFeature}>
-                {children}
-              </A4>
-            );
-          case 'D1':
-            return (
-              <D1 feature={selectedFeature}>
-                {children}
-              </D1>
-            );
-          case 'D2':
-            return (
-              <D2 feature={selectedFeature}>
-                {children}
-              </D2>
-            );
-          case 'D3':
-            return (
-              <D3 feature={selectedFeature}>
-                {children}
-              </D3>
-            );
-          case 'D5':
-            return (
-              <D5 feature={selectedFeature}>
-                {children}
-              </D5>
-            );
-          case 'D6':
-            return (
-              <D6 feature={selectedFeature}>
-                {children}
-              </D6>
-            );
-          case 'D7':
-            return (
-              <D7 feature={selectedFeature}>
-                {children}
-              </D7>
-            );
-          case 'H1':
-            return (
-              <H1 feature={selectedFeature}>
-                {children}
-              </H1>
-            );
-          case 'H3':
-            return (
-              <H3 feature={selectedFeature} setFeatureFocus={setFeatureFocus}>
-                {children}
-              </H3>
-            );
-          case 'H4':
-            return (
-              <H4 feature={selectedFeature}>
-                {children}
-              </H4>
-            );
-          case 'H5':
-            return (
-              <H5 feature={selectedFeature}>
-                {children}
-              </H5>
+              <BookWrapper startPage={selectedFeature.id[1]} updatePage={updatePage}>
+                <div><H1 feature={features.features[10]} /></div>
+                <div><H3 feature={features.features[11]} /></div>
+                <div><H4 feature={features.features[12]} /></div>
+                <div><H5 feature={features.features[13]} /></div>
+              </BookWrapper>
             );
           default:
             return null;

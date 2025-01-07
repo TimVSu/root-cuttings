@@ -1,14 +1,14 @@
 import L from 'leaflet';
 import { GeoJSON, useMap } from 'react-leaflet';
 import {
-  useEffect, useState, createContext, useContext, useMemo,
+  useState, createContext, useContext, useMemo,
+  useEffect,
 } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import features from '../data/narrative_fragments.json';
+import FragmentViz from './FragmentViz';
 import PlaceList from './PlaceList';
 import InfoToast from './InfoToast';
-import FragmentViz from './FragmentViz';
-import leftArrow from '../data/icons/left-arrow.png';
-import rightArrow from '../data/icons/right-arrow.png';
 
 export const MAP_CENTER = [40.637262, 32.083669];
 export const DEFAULT_ZOOM = 4.5;
@@ -25,10 +25,11 @@ export const useContentContext = () => useContext(ContentContext);
 
 export default function ContentLayer() {
   const map = useMap();
-  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState(null);
+  const [selectedFeatureIndex, setSelectedFeatureIndex] = useState(0);
   const [selectedFeature, setSelectedFeature] = useState(null);
   const [currentCenter, setCurrentCenter] = useState(MAP_CENTER);
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
+  // const [earthquake, setEarthquake] = useState(false);
 
   const styleMarker = (geoJsonPoint, latLng) => {
     const markerColor = geoJsonPoint.properties.person.toLowerCase();
@@ -47,7 +48,16 @@ export default function ContentLayer() {
     setCurrentZoom(DEFAULT_ZOOM);
   };
 
-  const isFirstPart = (feature) => FEATURE_MAPPING[feature.properties.person][0].id === feature.id;
+  const updatePage = (pageNumber) => {
+    const newId = FEATURE_MAPPING[selectedFeature.properties.person][pageNumber.data];
+    const newFeature = features.features.filter((feature) => feature.id === newId)[0];
+    setSelectedFeature(newFeature);
+    setCurrentCenter([newFeature.geometry.coordinates[1], newFeature.geometry.coordinates[0]]);
+    setCurrentZoom(FEATURE_ZOOM);
+  };
+
+  /*
+  const isFirstPart = (feature) => FEATURE_MAPPING[feature.properties.person][0] === feature.id;
 
   const isLastPart = (feature) => {
     const idArray = FEATURE_MAPPING[feature.properties.person];
@@ -71,6 +81,7 @@ export default function ContentLayer() {
     setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
     setCurrentZoom(FEATURE_ZOOM);
   };
+  */
 
   const attachEventListener = (feature, layer) => {
     layer.on('click', () => {
@@ -82,10 +93,31 @@ export default function ContentLayer() {
   };
 
   useEffect(() => {
-    if (currentCenter && currentZoom) {
-      map.flyTo(currentCenter, currentZoom);
-    }
+    map.flyTo(currentCenter, currentZoom);
   }, [currentCenter, currentZoom, map]);
+
+  /* useEffect(() => {
+    document.getElementById('close-content-box').classList.add('disabled');
+    let interval1; let interval2; let
+      interval3;
+    setTimeout(() => {
+      interval1 = setInterval(() => {
+        map.setView([modifiedCoords[1] - 0.0013, modifiedCoords[0] + 0.0011]);
+      }, 90);
+      interval2 = setInterval(() => {
+        map.setView([modifiedCoords[1] - 0.00099, modifiedCoords[0] - 0.001]);
+      }, 75);
+      interval3 = setInterval(() => {
+        map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
+      }, 80);
+      document.getElementById('close-content-box').classList.remove('disabled');
+    }, 3000);
+    return () => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
+    };
+  }); */
 
   const contextValues = useMemo(() => ({
     resetMap,
@@ -100,27 +132,12 @@ export default function ContentLayer() {
   }), [selectedFeature, selectedFeatureIndex, currentCenter, currentZoom]);
 
   return (
+    // eslint-disable-next-line react/jsx-no-comment-textnodes
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <ContentContext.Provider value={contextValues}>
       {selectedFeature
         ? (
-          <FragmentViz
-            selectedFeature={selectedFeature}
-          >
-            <div className="d-flex justify-content-between">
-              {!isFirstPart(selectedFeature)
-              && (
-              <button className="icon-button" aria-label="zurück" type="button" onClick={prevFeature}>
-                <img src={leftArrow} alt="" className="arrow-icon" />
-              </button>
-              )}
-              {!isLastPart(selectedFeature)
-              && (
-              <button className="icon-button" aria-label="vor" type="button" onClick={nextFeature}>
-                <img src={rightArrow} alt="" className="arrow-icon" />
-              </button>
-              )}
-            </div>
-          </FragmentViz>
+          <FragmentViz selectedFeature={selectedFeature} updatePage={updatePage} />
         )
         : (
           <div>

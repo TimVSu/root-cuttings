@@ -1,6 +1,7 @@
 import { MapContainer, ZoomControl, TileLayer } from 'react-leaflet';
 import ContentLayer from './ContentLayer';
 import './css/App.css';
+// eslint-disable-next-line import/order
 
 export const MAP_CENTER = [40.637262, 32.083669];
 /**
@@ -33,6 +34,7 @@ export default function App() {
       maxBounds={[[90, -180], [-90, 180]]}
       maxBoundsViscosity={1.0}
     >
+
       <TileLayer
         attribution={esriWorldImagery.attribution}
         url={esriWorldImagery.url}
