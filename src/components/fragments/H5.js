@@ -27,7 +27,6 @@ export default function H5({ feature, setFeatureFocus, children }) {
      * Plays the audio on repeat and pauses it when the content box is closed
      */
   useEffect(() => {
-    console.log('useeffectcall');
     const rainAudio = new Audio(natureSound);
     rainAudio.play();
     rainAudio.loop = true;

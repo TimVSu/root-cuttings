@@ -78,17 +78,17 @@
     user-select: none; /* Prevents text selection */
   }
 
-  .flipbook {
+.flipbook {
     z-index: 450;
   }
   
-  .flipbook-wrapper {
-    width: 300px;
-    height: 424px;
-    overflow: hidden; /* Prevent multi-page rendering */
-    display: block;   /* Ensure inline elements behave like block */
+.flipbook-wrapper {
+    width: 679px;
+    height: 740px;
+    overflow: hidden;
+    display: block;
     z-index: 470;
-  }
+}
   
 .hoverable-word {
   position: relative;
