@@ -88,6 +88,9 @@
     overflow: hidden;
     display: block;
     z-index: 470;
+    position: absolute;
+    top: 20px;
+    left: 20px;
 }
   
 .hoverable-word {
@@ -142,4 +145,17 @@
   pointer-events: auto;
 }
   
+.back-to-map-button {
+    position: fixed; /* Ensures positioning relative to the viewport */
+    top: 20px;
+    right: 20px;
+    width: fit-content;
+    background-color: var(--background) !important;
+    color: var(--text) !important;
+    font-size: 10pt !important;
+    font-family: var(--font) !important;
+    border-color: var(--text) !important;
+    border-width: 1px !important;
+    z-index: 600;
+}
   

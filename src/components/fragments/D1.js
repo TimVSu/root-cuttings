@@ -10,6 +10,7 @@ import img5 from '../../data/D1/photos/5_dance.png';
 import img6 from '../../data/D1/photos/6_picknick.png';
 import img7 from '../../data/D1/photos/7_teenagers.png';
 import img8 from '../../data/D1/photos/8_older.png';
+import { useContentContext } from '../ContentLayer';
 
 /**
  * Component displaying the text, location description, images, character bio, and visual effects related to the narrative fragment D1
@@ -28,12 +29,14 @@ export default function D1({ feature, setFeatureFocus, children }) {
      * The Leaflet map object
      */
   const map = useMap();
-
+  const { selectedFeature } = useContentContext();
   /**
      * Slowly pans the map towards Teheran
      */
   useEffect(() => {
-    map.panTo([35.73407393552157, 51.401564933532534], { animate: true, duration: 400, easeLinearity: 1 });
+    if (selectedFeature.id === 'D1') {
+      map.panTo([35.73407393552157, 51.401564933532534], { animate: true, duration: 400, easeLinearity: 1 });
+    }
   });
 
   return (

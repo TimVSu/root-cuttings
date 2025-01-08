@@ -17,6 +17,23 @@ import H3 from './fragments/H3';
 import H4 from './fragments/H4';
 import H5 from './fragments/H5';
 
+const MAP_DATA_INDICES = {
+  A1: 0,
+  A2: 1,
+  A3: 2,
+  A4: 3,
+  D1: 0,
+  D2: 1,
+  D3: 2,
+  D5: 3,
+  D6: 4,
+  D7: 5,
+  H1: 0,
+  H3: 1,
+  H4: 2,
+  H5: 3,
+};
+
 /**
  * Component displaying the narrative fragment, media, and visualizations of the selected geo-object
  *
@@ -56,19 +73,19 @@ export default function FragmentViz({
         interactive={false}
       />
       {(() => {
-        switch (selectedFeature.id[0]) {
-          case 'A':
+        switch (selectedFeature.properties.person) {
+          case 'Azar':
             return (
-              <BookWrapper startPage={selectedFeature.id[1]} updatePage={updatePage}>
+              <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
                 <div><A1 feature={features.features[6]} /></div>
                 <div><A2 feature={features.features[7]} /></div>
                 <div><A3 feature={features.features[8]} /></div>
                 <div><A4 feature={features.features[9]} /></div>
               </BookWrapper>
             );
-          case 'D':
+          case 'Darya':
             return (
-              <BookWrapper startPage={selectedFeature.id[1]} updatePage={updatePage}>
+              <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
                 <div><D1 feature={features.features[0]} /></div>
                 <div><D2 feature={features.features[1]} /></div>
                 <div><D3 feature={features.features[2]} /></div>
@@ -77,9 +94,9 @@ export default function FragmentViz({
                 <div><D7 feature={features.features[5]} /></div>
               </BookWrapper>
             );
-          case 'H':
+          case 'Hadi':
             return (
-              <BookWrapper startPage={selectedFeature.id[1]} updatePage={updatePage}>
+              <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
                 <div><H1 feature={features.features[10]} /></div>
                 <div><H3 feature={features.features[11]} /></div>
                 <div><H4 feature={features.features[12]} /></div>
