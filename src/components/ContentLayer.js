@@ -32,6 +32,12 @@ export default function ContentLayer() {
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
   // const [earthquake, setEarthquake] = useState(false);
 
+  const updateFeature = (feature) => {
+    setSelectedFeature(feature);
+    setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
+    setCurrentZoom(FEATURE_ZOOM);
+  };
+
   const styleMarker = (geoJsonPoint, latLng) => {
     const markerColor = geoJsonPoint.properties.person.toLowerCase();
     const icon = L.divIcon({
@@ -51,16 +57,12 @@ export default function ContentLayer() {
   const updatePage = (pageNumber) => {
     const newId = FEATURE_MAPPING[selectedFeature.properties.person][pageNumber.data];
     const newFeature = features.features.filter((feature) => feature.id === newId)[0];
-    setSelectedFeature(newFeature);
-    setCurrentCenter([newFeature.geometry.coordinates[1], newFeature.geometry.coordinates[0]]);
-    setCurrentZoom(FEATURE_ZOOM);
+    updateFeature(newFeature);
   };
 
   const attachEventListener = (feature, layer) => {
     layer.on('click', () => {
-      setSelectedFeature(feature);
-      setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-      setCurrentZoom(FEATURE_ZOOM);
+      updateFeature(feature);
     });
   };
 
@@ -119,7 +121,7 @@ export default function ContentLayer() {
         )
         : (
           <div>
-            <InfoToast />
+            <InfoToast updateFeature={updateFeature} />
             <PlaceList setCurrentZoom={setCurrentZoom} setCurrentCenter={setCurrentCenter} currentZoom={currentZoom} resetMap={resetMap} />
             <GeoJSON
               data={features}
