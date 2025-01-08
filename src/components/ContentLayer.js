@@ -56,33 +56,6 @@ export default function ContentLayer() {
     setCurrentZoom(FEATURE_ZOOM);
   };
 
-  /*
-  const isFirstPart = (feature) => FEATURE_MAPPING[feature.properties.person][0] === feature.id;
-
-  const isLastPart = (feature) => {
-    const idArray = FEATURE_MAPPING[feature.properties.person];
-    return idArray[idArray.length - 1] === feature.id;
-  };
-
-  const nextFeature = () => {
-    if (!selectedFeatureIndex || isLastPart(selectedFeature)) return;
-    const feature = features.features[selectedFeatureIndex + 1];
-    setSelectedFeatureIndex(selectedFeatureIndex + 1);
-    setSelectedFeature(feature);
-    setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-    setCurrentZoom(FEATURE_ZOOM);
-  };
-
-  const prevFeature = () => {
-    if (!selectedFeatureIndex || isFirstPart(selectedFeature)) return;
-    const feature = features.features[selectedFeatureIndex - 1];
-    setSelectedFeatureIndex(selectedFeatureIndex - 1);
-    setSelectedFeature(feature);
-    setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
-    setCurrentZoom(FEATURE_ZOOM);
-  };
-  */
-
   const attachEventListener = (feature, layer) => {
     layer.on('click', () => {
       setSelectedFeature(feature);
