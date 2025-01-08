@@ -11,6 +11,7 @@ import img6 from '../../data/D2/photos/6.jpeg';
 import img7 from '../../data/D2/photos/7.jpeg';
 import img8 from '../../data/D2/photos/8.jpeg';
 import './css/D2.css';
+import { useContentContext } from '../ContentLayer';
 
 /**
  * Component displaying the text, location description, images, character bio, and geospatial visualizations related to the narrative fragment D2
@@ -37,14 +38,16 @@ export default function D2({ feature, setFeatureFocus, children }) {
      * The images to be displayed in the slide show
      */
   const images = [img1, img3, img4, img5, img6, img7, img8];
-
+  const { selectedFeature } = useContentContext();
   /**
      * Zooms out and pans the map to show the entirety of the Germany image overlay after the view is focussed on the location marker
      */
   useEffect(() => {
-    setTimeout(() => {
-      map.flyToBounds([[nwBound[0], nwBound[1] - 7], [seBound[0], seBound[1] - 7]]);
-    }, 4000);
+    if (selectedFeature.id === 'D2') {
+      setTimeout(() => {
+        map.flyToBounds([[nwBound[0], nwBound[1] - 7], [seBound[0], seBound[1] - 7]]);
+      }, 4000);
+    }
   });
 
   return (

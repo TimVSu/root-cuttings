@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import { useMap } from 'react-leaflet';
 import {
   Button, Stack, Modal, Toast, Image,
 } from 'react-bootstrap';
 import ContentBox from '../ContentBox';
 import collage from '../../data/D7/collage.jpg';
 import './css/D7.css';
+import { useContentContext } from '../ContentLayer';
 
 /**
  * Component displaying the text, location description, image, character bio and interactive UI elements related to the narrative fragment D7.
@@ -27,14 +27,13 @@ export default function D7({ feature, setFeatureFocus, children }) {
   /**
      * The Leaflet map object
      */
-  const map = useMap();
-
+  const { setCurrentCenter, selectedFeature } = useContentContext();
   /**
      * Function handling user interaction with the prompt element and paning the map to Frankfurt Airport
      */
   const handleChoice = () => {
     setShowModal(false);
-    map.flyTo([50.037832541828124, 8.551775972924135 - 0.012]);
+    setCurrentCenter([50.037832541828124, 8.551775972924135 - 0.012]);
     setTimeout(() => {
       setShowToast(true);
     }, 6000);
@@ -88,13 +87,15 @@ export default function D7({ feature, setFeatureFocus, children }) {
         </span>
         {children}
       </ContentBox>
-
+      { selectedFeature.id === 'D7'
+      && (
       <Modal
         show={showModal}
         backdrop="static"
         keyboard={false}
         centered
       >
+
         <Modal.Body>
           <p>Bist du bereit, alles hinter dir zu lassen?</p>
           <Stack
@@ -121,6 +122,7 @@ export default function D7({ feature, setFeatureFocus, children }) {
           </Stack>
         </Modal.Body>
       </Modal>
+      ) }
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import { Button, Toast } from 'react-bootstrap';
 import './css/InfoToast.css';
+import features from '../data/narrative_fragments.json';
 
 /**
  * Component displaying a welcome message and instructions on how to navigate the web app
  *
  * @returns {React.JSX.Element}
  */
-export default function InfoToast() {
+export default function InfoToast({ updateFeature }) {
   /**
      * State storing a boolean value indicating whether the element is shown
      */
@@ -33,14 +34,14 @@ export default function InfoToast() {
         <br />
         Auf dieser Seite erzählen dir
         {' '}
-        <mark id="hadi-span">Hadi</mark>
+        <button type="button" id="hadi-button" onClick={() => { updateFeature(features.features[10]); }}>Hadi</button>
         ,
         {' '}
-        <mark id="azar-span">Azar</mark>
+        <button type="button" id="azar-button" onClick={() => { updateFeature(features.features[5]); }}>Azar</button>
         {' '}
         und
         {' '}
-        <mark id="darya-span">Darya</mark>
+        <button type="button" id="darya-button" onClick={() => { updateFeature(features.features[0]); }}>Darya</button>
         ,
         welche Auswirkungen die Migration nach Deutschland auf ihre Leben hatte.
         <br />

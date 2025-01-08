@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Button, Card, Collapse } from 'react-bootstrap';
-import { useContentContext } from './ContentLayer';
 import bios from '../data/bios.json';
 import './css/ContentBox.css';
 
@@ -16,7 +15,6 @@ import './css/ContentBox.css';
 export default function ContentBox({
   children, narrativeFragment, person,
 }) {
-  const { resetMap } = useContentContext();
   /**
      * State storing a boolean value indicating whether the long character bio is collapsed
      */
@@ -39,14 +37,6 @@ export default function ContentBox({
     <Card
       id="content-box"
     >
-      <Button
-        variant="link"
-        id="close-content-box"
-        title="schließen"
-        onClick={resetMap}
-      >
-        x
-      </Button>
       <Card.Body
         id="card-body"
       >
