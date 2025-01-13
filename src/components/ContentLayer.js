@@ -32,6 +32,8 @@ export default function ContentLayer() {
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
   // const [earthquake, setEarthquake] = useState(false);
 
+  console.log(map);
+
   const updateFeature = (feature) => {
     setSelectedFeature(feature);
     setCurrentCenter([feature.geometry.coordinates[1], feature.geometry.coordinates[0]]);
