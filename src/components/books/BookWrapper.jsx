@@ -16,8 +16,8 @@ function BookWrapper({ startPage, updatePage, children }) {
       onMouseUp={() => { map.dragging.enable(); }}
     >
       <HTMLFlipBook
-        width={778}
-        height={848}
+        width={660}
+        height={725}
         startZIndex={490}
         className="flipbook"
         ref={bookRef}

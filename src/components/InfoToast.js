@@ -37,7 +37,7 @@ export default function InfoToast({ updateFeature }) {
         <button type="button" id="hadi-button" onClick={() => { updateFeature(features.features[10]); }}>Hadi</button>
         ,
         {' '}
-        <button type="button" id="azar-button" onClick={() => { updateFeature(features.features[5]); }}>Azar</button>
+        <button type="button" id="azar-button" onClick={() => { updateFeature(features.features[6]); }}>Azar</button>
         {' '}
         und
         {' '}

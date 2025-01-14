@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 #content-box {
-    margin: 10px;
     z-index: 1000;
     color: var(--text);
     font-size: 9pt;
@@ -12,24 +11,21 @@
     white-space: pre-wrap;
     pointer-events: auto;
     overflow: visible;
-    /* Tagebuchstil */
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
-    background-size: 100% 24px; /* Abstand zwischen den Linien */
-    padding: 20px 30px; /* Innenabstand für Text */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schatteneffekt für Tiefe */
+    background-size: 100% 24px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: relative;
-    top: 10px;
-    left: 10px;
     width: 55em;
     height: 60em;
 }
 
 .narrative-fragment-text {
-    line-height: 24pt; /* Genau auf die Höhe der Hintergrundlinien abgestimmt */
-    font-size: 13pt; /* Textgröße leicht angepasst für besseren Effekt */
-    font-family: "Indie Flower", sans-serif; /* Schreibmaschinenähnliche Schriftart */
-    text-align: left; /* Text linksbündig halten */
-    word-wrap: break-word; /* Zeilenumbrüche für lange Texte */
+    line-height: 24pt;
+    font-size: 13pt;
+    font-family: "Indie Flower", sans-serif;
+    text-align: left;
+    word-wrap: break-word;
     padding: 0;
     margin: 0;
 }
