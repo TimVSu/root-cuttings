@@ -1,13 +1,6 @@
 import React from 'react';
 import ContentBox from './ContentBox';
 
-/**
- * Component displaying the cover page for a narrative diary
- *
- * @param {object} props
- * @param {string} props.person The name of the narrator for the diary
- * @returns {React.JSX.Element}
- */
 export default function Cover({ person }) {
   return (
     <div>

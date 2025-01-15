@@ -22,11 +22,8 @@ function BookWrapper({ startPage, updatePage, children }) {
         className="flipbook"
         ref={bookRef}
         maxShadowOpacity={0.2}
-        onInit={(initob) => {
-          console.log(initob.data);
-          bookRef.current.pageFlip().turnToPage(startPage);
-        }}
-        onFlip={(pageNumber) => { console.log('UPDATEPAGE'); updatePage(pageNumber); }}
+        onInit={() => startPage !== 1 && bookRef.current.pageFlip().turnToPage(startPage)}
+        onFlip={(pageNumber) => updatePage(pageNumber.data - 1)}
       >
         {children}
       </HTMLFlipBook>

@@ -55,7 +55,7 @@ export default function ContentLayer() {
   };
 
   const updatePage = (pageNumber) => {
-    const newId = FEATURE_MAPPING[selectedFeature.properties.person][pageNumber.data];
+    const newId = FEATURE_MAPPING[selectedFeature.properties.person][pageNumber];
     const newFeature = features.features.filter((feature) => feature.id === newId)[0];
     updateFeature(newFeature);
   };

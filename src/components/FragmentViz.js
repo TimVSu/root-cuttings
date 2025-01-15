@@ -19,20 +19,20 @@ import H4 from './fragments/H4';
 import H5 from './fragments/H5';
 
 const MAP_DATA_INDICES = {
-  A1: 0,
-  A2: 1,
-  A3: 2,
-  A4: 3,
-  D1: 0,
-  D2: 1,
-  D3: 2,
-  D5: 3,
+  A1: 1,
+  A2: 2,
+  A3: 3,
+  A4: 4,
+  D1: 1,
+  D2: 2,
+  D3: 3,
+  D5: 4,
   D6: 4,
-  D7: 5,
-  H1: 0,
-  H3: 1,
-  H4: 2,
-  H5: 3,
+  D7: 6,
+  H1: 1,
+  H3: 2,
+  H4: 3,
+  H5: 4,
 };
 
 /**
@@ -100,7 +100,7 @@ export default function FragmentViz({
           case 'Hadi':
             return (
               <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
-                <div><Cover person="Haidi" /></div>
+                <div><Cover person="Hadi" /></div>
                 <div><H1 feature={features.features[10]} /></div>
                 <div><H3 feature={features.features[11]} /></div>
                 <div><H4 feature={features.features[12]} /></div>
