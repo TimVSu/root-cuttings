@@ -2,6 +2,7 @@ import L from 'leaflet';
 import { Marker } from 'react-leaflet';
 import BookWrapper from './books/BookWrapper';
 import features from '../data/narrative_fragments.json';
+import Cover from './Cover';
 import A1 from './fragments/A1';
 import A2 from './fragments/A2';
 import A3 from './fragments/A3';
@@ -77,6 +78,7 @@ export default function FragmentViz({
           case 'Azar':
             return (
               <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
+                <div><Cover person="Azar" /></div>
                 <div><A1 feature={features.features[6]} /></div>
                 <div><A2 feature={features.features[7]} /></div>
                 <div><A3 feature={features.features[8]} /></div>
@@ -86,6 +88,7 @@ export default function FragmentViz({
           case 'Darya':
             return (
               <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
+                <div><Cover person="Darya" /></div>
                 <div><D1 feature={features.features[0]} /></div>
                 <div><D2 feature={features.features[1]} /></div>
                 <div><D3 feature={features.features[2]} /></div>
@@ -97,6 +100,7 @@ export default function FragmentViz({
           case 'Hadi':
             return (
               <BookWrapper startPage={MAP_DATA_INDICES[selectedFeature.id]} updatePage={updatePage}>
+                <div><Cover person="Haidi" /></div>
                 <div><H1 feature={features.features[10]} /></div>
                 <div><H3 feature={features.features[11]} /></div>
                 <div><H4 feature={features.features[12]} /></div>
