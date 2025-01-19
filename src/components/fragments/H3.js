@@ -1,18 +1,10 @@
-// import { useEffect } from 'react';
-// import { useMap } from 'react-leaflet';
 import { Image } from 'react-bootstrap';
 import ContentBox from '../ContentBox';
 import image from '../../data/H3/working.png';
 import './css/H3.css';
 import '../css/App.css';
-/**
- * Component displaying the text, location description, image, character bio, and visual effects related to the narrative fragment H3
- *
- * @param {object} props
- * @param {GeoJSON.Feature} props.feature The geo-object that was clicked on by the user
- * @param {React.Dispatch} props.setFeatureFocus Function to update the value indicating whether a geo-object is currently selected or not
- * @returns {React.JSX.Element}
- */
+
+
 export default function H3({ feature, setFeatureFocus, children }) {
   /**
      * The Leaflet map object
