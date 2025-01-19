@@ -23,7 +23,7 @@ function BookWrapper({ startPage, updatePage, children }) {
         ref={bookRef}
         maxShadowOpacity={0.2}
         onInit={() => startPage !== 1 && bookRef.current.pageFlip().turnToPage(startPage)}
-        onFlip={(pageNumber) => updatePage(pageNumber.data - 1)}
+        onFlip={(pageNumber) => pageNumber.data !== 0 && updatePage(pageNumber.data - 1)}
       >
         {children}
       </HTMLFlipBook>
