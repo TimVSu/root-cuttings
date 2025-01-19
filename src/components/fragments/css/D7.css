@@ -25,7 +25,6 @@
 .toast {
     float: right;
     z-index: 500;
-    position: relative;
     margin-right: 10rem;
     margin-top: 10rem;
 }

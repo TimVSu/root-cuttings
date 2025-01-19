@@ -24,7 +24,7 @@ export default function InfoToast({ updateFeature }) {
         id="close-toast"
         onClick={() => setShowToast(false)}
       >
-        x
+        &times;
       </Button>
       <Toast.Body
         className="mt-3 p-3"

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import {
-  Button, Stack, Modal, Toast, Image,
+  Button, Stack, Modal, Image,
 } from 'react-bootstrap';
 import ContentBox from '../ContentBox';
 import collage from '../../data/D7/collage.jpg';
@@ -41,24 +41,6 @@ export default function D7({ feature, setFeatureFocus, children }) {
 
   return (
     <div>
-      <Toast
-        show={showToast}
-      >
-        <Button
-          variant="link"
-          id="close-toast"
-          onClick={() => setShowToast(false)}
-        >
-          x
-        </Button>
-        <Toast.Body
-          className="mt-3"
-        >
-          Das war eine rhetorische Frage.
-          <br />
-          Willkommen in Deutschland!
-        </Toast.Body>
-      </Toast>
       <ContentBox
         narrativeFragment={feature.properties.text}
         person={feature.properties.person}
@@ -123,6 +105,41 @@ export default function D7({ feature, setFeatureFocus, children }) {
         </Modal.Body>
       </Modal>
       ) }
+      {selectedFeature.id === 'D7'
+      && (
+        <Modal
+          show={showToast}
+          backdrop="static"
+          keyboard={false}
+          centered
+        >
+          <Button
+            variant="link"
+            id="close-toast"
+            style={{
+              position: 'absolute',
+              top: '10px',
+              right: '10px',
+              fontSize: '1.2rem',
+              color: 'black',
+              zIndex: 1051,
+              width: 'auto',
+              padding: '0',
+              lineHeight: '1',
+            }}
+            onClick={() => setShowToast(false)}
+          >
+            &times;
+          </Button>
+          <Modal.Body
+            className="mt-3"
+          >
+            Das war eine rhetorische Frage.
+            <br />
+            Willkommen in Deutschland!
+          </Modal.Body>
+        </Modal>
+      )}
     </div>
   );
 }

@@ -24,6 +24,7 @@ export default function D5({ feature, setFeatureFocus, children }) {
      */
   useEffect(() => {
     if (selectedFeature === 'D5') {
+      console.log('playing');
       const rainAudio = new Audio(rainSound);
       rainAudio.play();
       rainAudio.loop = true;
