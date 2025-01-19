@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'react-bootstrap/Image';
 import ContentBox from '../ContentBox';
 import natureSound from '../../data/H5/nature.mp3';
@@ -24,17 +24,28 @@ export default function H5({ feature, setFeatureFocus, children }) {
   const imageAttribution = 'Irangilaneh, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons';
   const { selectedFeature } = useContentContext();
 
-  /**
-     * Plays the audio on repeat and pauses it when the content box is closed
-     */
+  const audioRef = useRef(null);
+
   useEffect(() => {
-    if (selectedFeature.id === 'H5') {
-      const rainAudio = new Audio(natureSound);
-      rainAudio.play();
-      rainAudio.loop = true;
-      return () => rainAudio.pause();
+    if (selectedFeature?.id === 'H5') {
+      if (!audioRef.current) {
+        audioRef.current = new Audio(natureSound);
+        audioRef.current.loop = true;
+      }
+      audioRef.current.play();
+
+      return () => {
+        if (audioRef.current) {
+          audioRef.current.pause();
+        }
+      };
     }
-    return () => {};
+
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+    };
   }, [selectedFeature]);
 
   return (
