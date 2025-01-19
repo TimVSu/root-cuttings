@@ -5,7 +5,6 @@ import {
   useState, createContext, useContext, useMemo,
   useEffect,
 } from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import features from '../data/narrative_fragments.json';
 import FragmentViz from './FragmentViz';
 import PlaceList from './PlaceList';
@@ -30,7 +29,6 @@ export default function ContentLayer() {
   const [selectedFeature, setSelectedFeature] = useState(null);
   const [currentCenter, setCurrentCenter] = useState(MAP_CENTER);
   const [currentZoom, setCurrentZoom] = useState(DEFAULT_ZOOM);
-  // const [earthquake, setEarthquake] = useState(false);
 
   const updateFeature = (feature) => {
     setSelectedFeature(feature);
@@ -69,29 +67,6 @@ export default function ContentLayer() {
   useEffect(() => {
     map.flyTo(currentCenter, currentZoom);
   }, [currentCenter, currentZoom, map]);
-
-  /* useEffect(() => {
-    document.getElementById('close-content-box').classList.add('disabled');
-    let interval1; let interval2; let
-      interval3;
-    setTimeout(() => {
-      interval1 = setInterval(() => {
-        map.setView([modifiedCoords[1] - 0.0013, modifiedCoords[0] + 0.0011]);
-      }, 90);
-      interval2 = setInterval(() => {
-        map.setView([modifiedCoords[1] - 0.00099, modifiedCoords[0] - 0.001]);
-      }, 75);
-      interval3 = setInterval(() => {
-        map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
-      }, 80);
-      document.getElementById('close-content-box').classList.remove('disabled');
-    }, 3000);
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(interval3);
-    };
-  }); */
 
   const contextValues = useMemo(() => ({
     resetMap,

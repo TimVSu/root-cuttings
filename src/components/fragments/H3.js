@@ -1,50 +1,85 @@
 import { Image } from 'react-bootstrap';
+import { useMemo, useEffect } from 'react';
+import { useMap } from 'react-leaflet';
 import ContentBox from '../ContentBox';
 import image from '../../data/H3/working.png';
+import { useContentContext } from '../ContentLayer';
 import './css/H3.css';
 import '../css/App.css';
 
-
 export default function H3({ feature, setFeatureFocus, children }) {
-  /**
-     * The Leaflet map object
-     */
-  // const map = useMap();
+  const map = useMap();
+
+  const { selectedFeature } = useContentContext();
   /**
      * Coordinates of the selected geo-object
      */
-  // const coords = feature.geometry.coordinates;
+  const coords = feature.geometry.coordinates;
   /**
      * Modified coordinates to fit the layout with the content box
      */
-  // const modifiedCoords = [coords[0] - 0.023, coords[1]];
+  const modifiedCoords = useMemo(() => [coords[0] - 0.023, coords[1]], [coords]);
 
   /**
      * Creates a visual effect that simulates an earth quake
      */
-  /* useEffect(() => {
-    document.getElementById('close-content-box').classList.add('disabled');
-    let interval1; let interval2; let
-      interval3;
-    setTimeout(() => {
-      interval1 = setInterval(() => {
-        map.setView([modifiedCoords[1] - 0.0013, modifiedCoords[0] + 0.0011]);
-      }, 90);
-      interval2 = setInterval(() => {
-        map.setView([modifiedCoords[1] - 0.00099, modifiedCoords[0] - 0.001]);
-      }, 75);
-      interval3 = setInterval(() => {
-        map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
-      }, 80);
-      document.getElementById('close-content-box').classList.remove('disabled');
-    }, 3000);
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(interval3);
-    };
-  }); */
+  useEffect(() => {
+    if (selectedFeature.id === 'H3') {
+      const handleFlyEnd = () => {
+        map.off('moveend', handleFlyEnd);
+        const resetButton = document.getElementById('reset-button');
+        resetButton?.classList.add('disabled');
 
+        const startEarthquake = () => {
+          let iteration = 0;
+          const maxIterations = 20;
+          const earthquakeInterval = 100;
+          let earthquakeEffect;
+
+          const stopEarthquake = () => {
+            if (earthquakeEffect) {
+              clearInterval(earthquakeEffect);
+            }
+            resetButton?.classList.remove('disabled');
+          };
+
+          earthquakeEffect = setInterval(() => {
+            if (iteration >= maxIterations) {
+              stopEarthquake();
+              return;
+            }
+
+            const offsetLat = (Math.random() - 0.5) * 0.008;
+            const offsetLng = (Math.random() - 0.5) * 0.008;
+
+            map.setView([modifiedCoords[1] + offsetLat, modifiedCoords[0] + offsetLng]);
+            iteration += 1;
+          }, earthquakeInterval);
+
+          return stopEarthquake;
+        };
+
+        const timeout = setTimeout(() => {
+          const cleanupEarthquake = startEarthquake();
+
+          return () => {
+            clearTimeout(timeout);
+            cleanupEarthquake?.();
+          };
+        }, 3000);
+
+        return () => {
+          clearTimeout(timeout);
+        };
+      };
+      map.on('moveend', handleFlyEnd);
+
+      return () => {
+        map.off('moveend', handleFlyEnd);
+      };
+    }
+    return () => {};
+  }, [selectedFeature, map, modifiedCoords]);
   return (
     <div>
       <ContentBox
