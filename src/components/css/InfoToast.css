@@ -19,12 +19,12 @@
     outline: none;
     cursor: pointer;
     transition: all 0.3s ease; 
-    border: 1px solid var(--hadi);
 }
 
 #hadi-button:hover {
     background-color: transparent; 
     color: var(--hadi);
+    border: 1px solid var(--hadi);
 }
 
 #azar-button {
@@ -33,13 +33,13 @@
     border: none; 
     outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid var(--azar);
+    transition: all 0.3s ease; 
 }
 
 #azar-button:hover {
     background-color: transparent; 
     color: var(--azar);
+    border: 1px solid var(--azar);
 }
 
 #darya-button {
@@ -48,13 +48,13 @@
     border: none; 
     outline: none;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid var(--darya); 
+    transition: all 0.3s ease; 
 }
 
 #darya-button:hover {
     background-color: transparent; 
     color: var(--darya);
+    border: 1px solid var(--darya);
 }
 
 #toast-icon {

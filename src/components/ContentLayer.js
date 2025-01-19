@@ -55,7 +55,7 @@ export default function ContentLayer() {
   };
 
   const updatePage = (pageNumber) => {
-    const newId = FEATURE_MAPPING[selectedFeature.properties.person][pageNumber.data];
+    const newId = FEATURE_MAPPING[selectedFeature.properties.person][pageNumber];
     const newFeature = features.features.filter((feature) => feature.id === newId)[0];
     updateFeature(newFeature);
   };
@@ -69,6 +69,29 @@ export default function ContentLayer() {
   useEffect(() => {
     map.flyTo(currentCenter, currentZoom);
   }, [currentCenter, currentZoom, map]);
+
+  /* useEffect(() => {
+    document.getElementById('close-content-box').classList.add('disabled');
+    let interval1; let interval2; let
+      interval3;
+    setTimeout(() => {
+      interval1 = setInterval(() => {
+        map.setView([modifiedCoords[1] - 0.0013, modifiedCoords[0] + 0.0011]);
+      }, 90);
+      interval2 = setInterval(() => {
+        map.setView([modifiedCoords[1] - 0.00099, modifiedCoords[0] - 0.001]);
+      }, 75);
+      interval3 = setInterval(() => {
+        map.setView([modifiedCoords[1] + 0.00089, modifiedCoords[0] + 0.001]);
+      }, 80);
+      document.getElementById('close-content-box').classList.remove('disabled');
+    }, 3000);
+    return () => {
+      clearInterval(interval1);
+      clearInterval(interval2);
+      clearInterval(interval3);
+    };
+  }); */
 
   const contextValues = useMemo(() => ({
     resetMap,
@@ -90,7 +113,6 @@ export default function ContentLayer() {
             <FragmentViz selectedFeature={selectedFeature} updatePage={updatePage} />
             <Button
               className="back-to-map-button"
-              id="reset-button"
               onClick={resetMap}
             >
               Zurück zur Karte

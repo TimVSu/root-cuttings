@@ -16,16 +16,14 @@ function BookWrapper({ startPage, updatePage, children }) {
       onMouseUp={() => { map.dragging.enable(); }}
     >
       <HTMLFlipBook
-        width={660}
-        height={725}
+        width={778}
+        height={848}
         startZIndex={490}
         className="flipbook"
         ref={bookRef}
         maxShadowOpacity={0.2}
-        onInit={() => {
-          bookRef.current.pageFlip().turnToPage(startPage);
-        }}
-        onFlip={(pageNumber) => { updatePage(pageNumber); }}
+        onInit={() => startPage !== 1 && bookRef.current.pageFlip().turnToPage(startPage)}
+        onFlip={(pageNumber) => updatePage(pageNumber.data - 1)}
       >
         {children}
       </HTMLFlipBook>

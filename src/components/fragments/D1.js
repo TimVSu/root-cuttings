@@ -35,12 +35,7 @@ export default function D1({ feature, setFeatureFocus, children }) {
      */
   useEffect(() => {
     if (selectedFeature.id === 'D1') {
-      const handleFlyEnd = () => {
-        map.panTo([35.73407393552157, 51.401564933532534], { animate: true, duration: 400, easeLinearity: 1 });
-        map.off('moveend', handleFlyEnd);
-      };
-
-      map.on('moveend', handleFlyEnd);
+      map.panTo([35.73407393552157, 51.401564933532534], { animate: true, duration: 400, easeLinearity: 1 });
     }
   });
 

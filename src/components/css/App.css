@@ -62,19 +62,35 @@
     opacity: 0.4;
 }
 
+.demoPage {
+    width: 200; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 500; 
+    display: block;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif; /* Clean and readable font */
+    font-size: 24px; /* Adjust as needed */
+    color: #333; /* Dark text color */
+    background-color: #f9f9f9; /* Light background for contrast */
+    user-select: none; /* Prevents text selection */
+  }
+
 .flipbook {
     z-index: 450;
   }
   
 .flipbook-wrapper {
-    width: 660px;
-    height: 725px;
+    width: 679px;
+    height: 740px;
     overflow: hidden;
     display: block;
     z-index: 470;
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 20px;
+    left: 20px;
 }
   
 .hoverable-word {
