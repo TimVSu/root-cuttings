@@ -11,6 +11,7 @@ export default function Cover({ person }) {
             marginTop: '50%',
             fontSize: '40pt',
             color: 'var(--primary)',
+            fontFamily: "'Indie Flower', cursive",
           }}
         >
           <h1>{`${person}'s Tagebuch`}</h1>

@@ -4,7 +4,6 @@ import image from '../../data/H3/working.png';
 import './css/H3.css';
 import '../css/App.css';
 
-
 export default function H3({ feature, setFeatureFocus, children }) {
   /**
      * The Leaflet map object
