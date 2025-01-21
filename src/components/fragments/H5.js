@@ -5,6 +5,7 @@ import natureSound from '../../data/H5/nature.mp3';
 import image from '../../data/H5/gilan_house.JPG';
 import './css/H5.css';
 import { useContentContext } from '../ContentLayer';
+import { useBookContext } from '../books/BookWrapper';
 /**
  * Component displaying the text, location description, image, and character bio and playing the audio related to the narrative fragment H5
  *
@@ -23,11 +24,12 @@ export default function H5({ feature, setFeatureFocus, children }) {
      */
   const imageAttribution = 'Irangilaneh, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons';
   const { selectedFeature } = useContentContext();
+  const { currentPage } = useBookContext();
 
   const audioRef = useRef(null);
 
   useEffect(() => {
-    if (selectedFeature?.id === 'H5') {
+    if (selectedFeature?.id === 'H5' && currentPage !== 0) {
       if (!audioRef.current) {
         audioRef.current = new Audio(natureSound);
         audioRef.current.loop = true;
@@ -46,7 +48,7 @@ export default function H5({ feature, setFeatureFocus, children }) {
         audioRef.current.pause();
       }
     };
-  }, [selectedFeature]);
+  }, [selectedFeature, currentPage]);
 
   return (
     <div>

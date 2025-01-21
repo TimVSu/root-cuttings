@@ -1,12 +1,33 @@
-import React, { useRef } from 'react';
+import React, {
+  useRef, useContext, createContext, useState,
+} from 'react';
 import '../css/App.css';
 import HTMLFlipBook from 'react-pageflip';
 import { useMap } from 'react-leaflet';
 
+const BookContext = createContext();
+
+export const useBookContext = () => useContext(BookContext);
+
 function BookWrapper({ startPage, updatePage, children }) {
   const bookRef = useRef();
   const map = useMap();
+  const [currentPage, setCurrentPage] = useState(0);
 
+  const onInit = (pageNumber) => {
+    if (pageNumber !== 1) {
+      bookRef.current.pageFlip().turnToPage(pageNumber);
+      setCurrentPage(pageNumber);
+    }
+  };
+
+  const onUpdate = (pageNumber) => {
+    if (pageNumber !== (1 || 0)) {
+      updatePage(pageNumber - 1);
+      setCurrentPage(pageNumber);
+    }
+    setCurrentPage(pageNumber);
+  };
   return (
     <div
       role="button"
@@ -15,18 +36,20 @@ function BookWrapper({ startPage, updatePage, children }) {
       onMouseDown={() => { map.dragging.disable(); }}
       onMouseUp={() => { map.dragging.enable(); }}
     >
-      <HTMLFlipBook
-        width={679}
-        height={740}
-        startZIndex={490}
-        className="flipbook"
-        ref={bookRef}
-        maxShadowOpacity={0.2}
-        onInit={() => startPage !== 1 && bookRef.current.pageFlip().turnToPage(startPage)}
-        onFlip={(pageNumber) => pageNumber.data !== 0 && updatePage(pageNumber.data - 1)}
-      >
-        {children}
-      </HTMLFlipBook>
+      <BookContext.Provider value={currentPage}>
+        <HTMLFlipBook
+          width={679}
+          height={740}
+          startZIndex={490}
+          className="flipbook"
+          ref={bookRef}
+          maxShadowOpacity={0.2}
+          onInit={() => onInit(startPage)}
+          onFlip={(pageNumber) => onUpdate(pageNumber.data)}
+        >
+          {children}
+        </HTMLFlipBook>
+      </BookContext.Provider>
     </div>
   );
 }

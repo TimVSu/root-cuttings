@@ -3,6 +3,7 @@ import ContentBox from '../ContentBox';
 import rainSound from '../../data/D5/rain_thunder_compressed_large.wav';
 import './css/D5.css';
 import { useContentContext } from '../ContentLayer';
+import { useBookContext } from '../books/BookWrapper';
 
 /**
  * Component displaying the text, location description, character bio, and visual effects and playing the audio related to the narrative fragment D5
@@ -18,20 +19,20 @@ export default function D5({ feature, setFeatureFocus, children }) {
      */
   const soundAttribution = 'Rain_thunder_garden by Suso_Ramallo\nhttps://freesound.org/s/482684/\nLicense: Attribution 4.0';
   const { selectedFeature } = useContentContext();
+  const { currentPage } = useBookContext();
 
   /**
      * Plays the audio on repeat and pauses it when the content box is closed
      */
   useEffect(() => {
-    if (selectedFeature === 'D5') {
-      console.log('playing');
+    if (selectedFeature === 'D5' && currentPage !== 0) {
       const rainAudio = new Audio(rainSound);
       rainAudio.play();
       rainAudio.loop = true;
       return () => rainAudio.pause();
     }
     return () => {};
-  }, [selectedFeature]);
+  }, [selectedFeature, currentPage]);
 
   return (
     <div>

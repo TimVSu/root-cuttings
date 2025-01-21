@@ -4,6 +4,7 @@ import birds from '../../data/D6/Qeshm.m4a';
 import azan from '../../data/D6/Azan_Qeshm.m4a';
 import './css/D6.css';
 import { useContentContext } from '../ContentLayer';
+import { useBookContext } from '../books/BookWrapper';
 
 /**
  * Component displaying the text, location description, character bio, and visual effects and playing the audios related to the the narrative fragment D6
@@ -18,9 +19,11 @@ export default function D6({ feature, setFeatureFocus, children }) {
      * Plays the audios on repeat and pauses them when the content box is closed
      */
   const { selectedFeature } = useContentContext();
+  const { currentPage } = useBookContext();
+  console.log(currentPage);
 
   useEffect(() => {
-    if (selectedFeature.id === 'D6') {
+    if (selectedFeature.id === 'D6' && currentPage !== 0) {
       const azanAudio = new Audio(azan);
       azanAudio.play();
       azanAudio.loop = true;
@@ -34,8 +37,9 @@ export default function D6({ feature, setFeatureFocus, children }) {
         azanAudio.pause();
       };
     }
+
     return () => {};
-  }, [selectedFeature]);
+  }, [selectedFeature, currentPage]);
 
   return (
     <div>
