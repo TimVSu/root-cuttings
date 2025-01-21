@@ -20,7 +20,6 @@ export default function D6({ feature, setFeatureFocus, children }) {
      */
   const { selectedFeature } = useContentContext();
   const { currentPage } = useBookContext();
-  console.log(currentPage);
 
   useEffect(() => {
     if (selectedFeature.id === 'D6' && currentPage !== 0) {
