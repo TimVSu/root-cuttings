@@ -22,7 +22,7 @@ function BookWrapper({ startPage, updatePage, children }) {
   };
 
   const onUpdate = (pageNumber) => {
-    if (pageNumber !== (1 || 0)) {
+    if (pageNumber !== 1 && pageNumber !== 0) {
       updatePage(pageNumber - 1);
       setCurrentPage(pageNumber);
     }
